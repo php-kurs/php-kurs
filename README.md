@@ -1,5 +1,9 @@
-## Kurs PHP - kod źródłowy strony.
+![PHP Kurs](http://i.imgur.com/O7IGsX1.png)
 
-1. Jekyll  | Scuplin ? IMHO Jekyll
-2. Podkreślanie kodu: http://prismjs.com/
-3. http://phpkurs.acunote.com/projects/50897/sprints
+# Cześć!
+Kurs który widzisz przed sobą został stworzony po to, aby nauczyć Cię podstaw języka PHP i troszkę więcej…
+
+
+#KURS OPIERAMY O PHP 5.6+ więc nie trza wspominać, że coś jest od 5.4..
+
+ac: http://phpkurs.acunote.com/projects/50897/sprints

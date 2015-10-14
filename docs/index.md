@@ -53,5 +53,4 @@ ___
 **Gotów ?**  
 
 # Ściągawka tematów (TEST):
-
-https://drive.google.com/open?id=0B1B7PvrZIyZzZDZhV1J2SmJCcnM
+ [LINK DO GOOGLEDOCS](https://drive.google.com/open?id=0B1B7PvrZIyZzZDZhV1J2SmJCcnM)

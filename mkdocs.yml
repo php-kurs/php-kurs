@@ -4,10 +4,18 @@ use_directory_urls: true
 repo_url: https://github.com/efiku/php-kurs
 site_description: Nowoczesny kurs programowania w PHP!
 site_author: Marek Woś & Krzysztof Pazdur
-
+google_analytics: ['UA-68861340-1', 'auto']
 pages:
 - Strona Główna: 'index.md'
 - Część I:
   - Podstawy składni : 'czesc-i/podstawy-skladni.md'
   - Zmienne : 'czesc-i/zmienne.md'
-- Autorzy: 'authors.md'
+  - Stałe : 'czesc-i/stale.md'
+  - Zasięgi : 'czesc-i/zasiegi.md'
+  - Operatory : 'czesc-i/operatory.md'
+  - Tablice : 'czesc-i/tablice.md'
+  - Instrukcje Warunkowe : 'czesc-i/instrukcje-warunkowe.md'
+  - Pętle : 'czesc-i/petle.md'
+  - Wyrażenia Regularne : 'czesc-i/wyrazenia-regularne.md'
+  - Ponowne wykorzystanie kodu : 'czesc-i/ponowne-wykorzystanie-kodu.md'
+- Autorzy: 'autorzy.md'

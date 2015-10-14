@@ -51,3 +51,7 @@ Mówimy tak dla dwóch liderów na rynku IDE:
 ___
 
 **Gotów ?**  
+
+# Ściągawka tematów (TEST):
+
+https://drive.google.com/open?id=0B1B7PvrZIyZzZDZhV1J2SmJCcnM

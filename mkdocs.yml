@@ -1,10 +1,13 @@
-site_name: PHP - Kurs
+site_name: PHPKurs
 theme: readthedocs
-use_directory_urls: false
+use_directory_urls: true
 repo_url: https://github.com/efiku/php-kurs
 site_description: Nowoczesny kurs programowania w PHP!
 site_author: Marek Woś & Krzysztof Pazdur
 
 pages:
 - Strona Główna: 'index.md'
+- Część I:
+  - Podstawy składni : 'czesc-i/podstawy-skladni.md'
+  - Zmienne : 'czesc-i/zmienne.md'
 - Autorzy: 'authors.md'

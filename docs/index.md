@@ -41,16 +41,25 @@ Otóż nie! Udowodnimy, że pisanie testów opłaca się, a kod który przejdzie
 Do testów użyjemy nie byle jakich narzędzi - phpunit, phpspec , behat.  
 O, poruszymy też kwestię debugowania kodu w PHP za pomocą xdebug.  
   
-# Narzędzia.
-Mówimy nie, edytorom które próbują udawać, że są IDE.  
-Mówimy nie Notepad++.  
-Mówimy tak dla dwóch liderów na rynku IDE: 
- 1. PHPStorm
- 2. Netbeans PHP.
-  
+# Narzędzia
+Każdy kiedyś zaczynał od notatnika... wie jak to się pisało. 
+Zero podpowiadania nazw funkcji, brak analizy kodu w czasie rzeczywistym. Praca z notatnikiem to była męczarnia, ale te czasy na szczęście już minęły!
+Zapamiętaj. Notatnik to nie IDE. 
+
+W tym kursie będziemy posługiwać się dwoma IDE.
+
+ 1. **Płatnym PHPStorm (najlepsze  płatne IDE dla PHP)**
+ 2. **Darmowym NetBeans PHP (najlepszy darmowy IDE dla PHP)**
+
+Pokażemy Ci, że dużo wygodniej piszę się w takim Stromie niż notatniku.
+Oczywiście, w dalszych rozdziałach dowiemy się o narzędziach służących do tworzenia testów, specyfikacji klas,  będziemy pisać kod sterowany testami.  
+
+To był tylko mały wstęp, jeżeli się nie poddasz i dotrzesz do części poświęconej testom, to gwarantujemy, że się zakochasz!
+
 ___
 
 **Gotów ?**  
 
 # Ściągawka tematów (TEST):
- [LINK DO GOOGLEDOCS](https://drive.google.com/open?id=0B1B7PvrZIyZzZDZhV1J2SmJCcnM)
+
+https://drive.google.com/open?id=0B1B7PvrZIyZzZDZhV1J2SmJCcnM

@@ -1,5 +1,5 @@
 site_name: PHPKurs
-theme: readthedocs
+theme_dir: theme/readthedocs2
 use_directory_urls: true
 repo_url: https://github.com/efiku/php-kurs
 site_description: Nowoczesny kurs programowania w PHP!

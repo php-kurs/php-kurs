@@ -3,28 +3,46 @@
 **Tablice w PHP odgrywają bardzo ważną rolę dlatego proszę, przeczytaj uważnie ten temat!**  
 *Abyś łatwiej zrozumiał działanie tablic postaramy się pokazać to na realnych przykładach.*
 
-Czym są tablice?
+**Czym są tablice?**
 
-Najprościej mówiąc, tablica to taki pojemnik na dane które mogą być różnego typu, a więc tablice to typ złożony.
+Najprościej mówiąc, tablica to taki pojemnik na dane, które mogą być różnego typu, a więc tablice to typ złożony.
 
-Tablice w których dane są tego samego typu nazywamy **kolekcją**.  
-Przykładowo: 
+Tablice, w których dane są tego samego typu nazywamy **kolekcją**.  
+
+**Przykładowo:**  
 
 Mamy w garażu 20 aut różnej marki, ale każde z nich ma przypisany numerek.  
 Garaż to nasza tablica, numery to indeksy, a auta to wartości pod konkretnym indeksem.  
 Możemy śmiało powiedzieć, że nasz garaż przechowuje kolekcję aut.  
 
-**W PHP mamy dwie wersje tablic.**
+**W PHP dysponujemy dwoma rodzajami tablic** 
 
 Tablice które posiadają indeks:
- 
-**Numeracja elementów tablicy zaczyna się od zera!!** 
+```php
 
->Często początkujący programiści zapominają o numeracji indeksów w tablicy i przekraczają zakres 
+<?php
+  $beer = [
+   'Perła'
+   2.50,
+   'dobra!'
+  ];
+```
  
- a także tablice z kluczami: Asocjacyjne.
+Tablice z kluczami, asocjacyjne.
+  
+```php
 
-**Tutaj częstym błędem jest odwoływanie się do nieistniejącego klucza**
+<?php  
+  $beer = [
+   "name" => 'Perła',
+   "cost" => 2.5,
+   "currency" => 'PLN'
+   "description" => 'Najlepsze piwo dla programistów PHP'
+  ];
+  
+```  
+
+___
 
 Czasami dochodzimy do momentu w którym tablice posiadające jeden wymiar nam już nie wystarczą.
 Wtedy zastanawiamy się, czy istnieje jakiś sposób, aby dodać jeden wymiar więcej.
@@ -32,7 +50,13 @@ Wtedy zastanawiamy się, czy istnieje jakiś sposób, aby dodać jeden wymiar wi
 Wyobraź sobie, że posiadasz kilka garaży, każdy garaż przechowuję kolekcję aut.  
 Chcąc się odwołać do konkretnego auta, musisz określić w jakim garażu to auto się znajduję. 
 
-` Garaze[3][2] // Ferrari`
+```php
+
+<?php
+
+  echo $garages[3][2]; # Ferrari
+
+```
 
 * 3 : To numer konkretnego garażu
 * 2 : To numer parkingu na którym stoi nasze auto.
@@ -41,7 +65,19 @@ ___
 
 # Tablice z indeksem
 
-Deklarujemy ją w następujący sposób.
+**Numeracja elementów tablicy zaczyna się od zera!!** 
+
+>Często początkujący programiści zapominają o numeracji indeksów w tablicy i przekraczają zakres. 
+
+
+# Tablice z kluczem
+
+**Tutaj częstym błędem jest odwoływanie się do nieistniejącego klucza**
+
+
+### Operacje na elementach
+
+Tablice w PHP deklarujemy w następujący sposób:
 
 ```php
 
@@ -49,11 +85,9 @@ Deklarujemy ją w następujący sposób.
 $beer = [];
   
 ```
-W ten oto sposób zadeklarowaliśmy pustą tablicę. 
 
 Nazwa zmiennej wskazuje, że będziemy w niej przechowywać informacje o konkretnym piwie.
 
-### Operacje na elementach
 Możemy już w momencie deklarowania tablicy, określić jakie będzie miała elementy;
  
 ```php
@@ -108,9 +142,6 @@ unset($beer[2]);
 print_r($beer); # array(3) { 'Perla', 2.5 , 'efik' }
 
 ```
- 
-# Tablice asocjacyjne
-
 
 # Przeglądanie tablic
 

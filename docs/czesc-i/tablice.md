@@ -53,6 +53,19 @@ Chcąc się odwołać do konkretnego auta, musisz określić w jakim garażu to 
 ```php
 
 <?php
+  $garage = [
+    'Opel',
+    'Skoda',
+    'Ferrari' # indeks 2
+   ];
+
+  $garages = [
+      $garage,
+      $garage,
+      $garage,
+      $garage # indeks 3
+  ]; 
+
 
   echo $garages[3][2]; # Ferrari
 
@@ -61,20 +74,6 @@ Chcąc się odwołać do konkretnego auta, musisz określić w jakim garażu to 
 * 3 : To numer konkretnego garażu
 * 2 : To numer parkingu na którym stoi nasze auto.
 
-___
-
-# Tablice z indeksem
-
-**Numeracja elementów tablicy zaczyna się od zera!!** 
-
->Często początkujący programiści zapominają o numeracji indeksów w tablicy i przekraczają zakres. 
-
-
-# Tablice z kluczem
-
-**Tutaj częstym błędem jest odwoływanie się do nieistniejącego klucza**
-
-
 ### Operacje na elementach
 
 Tablice w PHP deklarujemy w następujący sposób:
@@ -82,7 +81,7 @@ Tablice w PHP deklarujemy w następujący sposób:
 ```php
 
 <?php
-$beer = [];
+$beer = []; 
   
 ```
 
@@ -97,7 +96,7 @@ $beer = [ 'Perła', 2.50, 'ID301049102' ] ;
 
 ```
 
-Wiedząc, że mamy do czynienia z tablicą z indeksem, możemy się teraz np. odwołać do indeksu `1` . 
+Wiedząc, że mamy do czynienia z indeksowaną tablicą, możemy wyświetlić wartość z indeksu `1` . 
  
 ```php
 
@@ -106,6 +105,11 @@ Wiedząc, że mamy do czynienia z tablicą z indeksem, możemy się teraz np. o
 echo $beer[1]; # 2.50
  
 ``` 
+**Numeracja elementów tablicy zaczyna się od zera!!** 
+
+>Często początkujący programiści zapominają o numeracji indeksów w tablicy i przekraczają zakres. 
+
+
 
 Zapytasz pewnie, jak dodawać jakiś element do takiej tablicy? 
 To nic trudnego. Są dwa sposoby aby dodać jakiś element. 
@@ -132,8 +136,10 @@ $beer[] = 'efik';
  Skrypt zwróci dokładnie to samo co wyżej. 
  
 
-W Usuwaniu elementów tablicy pomaga funkcja [unset\(\)](http://php.net/manual/en/function.unset.php)
- Przykład:
+W Usuwaniu elementów tablicy pomaga funkcja [unset\(\)](http://php.net/manual/en/function.unset.php)  
+
+
+**Przykład:**
 
 ```php
 

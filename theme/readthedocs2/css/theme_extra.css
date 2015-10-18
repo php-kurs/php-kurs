@@ -135,10 +135,14 @@ code.cs, code.c {
 }
 
 blockquote{
-margin: auto !important;
-background-color: #e1e4e5;
-padding: 10px;
-color: #333;
+    background-color: rgb(255, 205, 176);
+    padding: 10px;
+    color: #650D0D;
+    border: 1px solid #6B4949;
+    border-radius: 6px;
+    margin-bottom: 10px !important;
+    margin-left: auto !important;
+    box-shadow: -1px 1px 11px 2px rgba(0, 0, 0, 0.09);
 }
 
 blockquote p {

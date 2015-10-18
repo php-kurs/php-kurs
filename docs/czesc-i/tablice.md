@@ -14,16 +14,13 @@ Mamy w garażu 20 aut różnej marki, ale każde z nich ma przypisany numerek.
 Garaż to nasza tablica, numery to indeksy, a auta to wartości pod konkretnym indeksem.  
 Możemy śmiało powiedzieć, że nasz garaż przechowuje kolekcję aut.  
 
-
 **W PHP mamy dwie wersje tablic.**
-
 
 Tablice które posiadają indeks:
  
 **Numeracja elementów tablicy zaczyna się od zera!!** 
 
 >Często początkujący programiści zapominają o numeracji indeksów w tablicy i przekraczają zakres 
-
  
  a także tablice z kluczami: Asocjacyjne.
 
@@ -39,6 +36,8 @@ Chcąc się odwołać do konkretnego auta, musisz określić w jakim garażu to 
 
 * 3 : To numer konkretnego garażu
 * 2 : To numer parkingu na którym stoi nasze auto.
+
+___
 
 # Tablice z indeksem
 

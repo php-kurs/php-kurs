@@ -74,7 +74,7 @@ Chcąc się odwołać do konkretnego auta, musisz określić w jakim garażu to 
 * 3 : To numer konkretnego garażu
 * 2 : To numer parkingu na którym stoi nasze auto.
 
-### Operacje na elementach
+# Operacje na elementach
 
 Tablice w PHP deklarujemy w następujący sposób:
 
@@ -86,6 +86,8 @@ $beer = [];
 ```
 
 Nazwa zmiennej wskazuje, że będziemy w niej przechowywać informacje o konkretnym piwie.
+
+> **UWAGA!** Możesz spotkać się z zapisem **array()** ale jest on już nieużywany.
 
 Możemy już w momencie deklarowania tablicy, określić jakie będzie miała elementy;
  
@@ -105,17 +107,19 @@ Wiedząc, że mamy do czynienia z indeksowaną tablicą, możemy wyświetlić wa
 echo $beer[1]; # 2.50
  
 ``` 
-**Numeracja elementów tablicy zaczyna się od zera!!** 
-
+>**Numeracja elementów tablicy zaczyna się od zera!!**   
 >Często początkujący programiści zapominają o numeracji indeksów w tablicy i przekraczają zakres. 
 
 
+Dodawanie elementów do tablicy zazwyczaj odbywa się na dwa sposoby.
 
-Zapytasz pewnie, jak dodawać jakiś element do takiej tablicy? 
-To nic trudnego. Są dwa sposoby aby dodać jakiś element. 
 
-1. [array_push](http://php.net/manual/en/function.array-push.php) - to funkcja która dodaje jakiś element do tablicy
-  Przykład:
+- Za pomocą funkcji array_push
+ 
+[array_push](http://php.net/manual/en/function.array-push.php) - to funkcja która dodaje jakiś element do tablicy
+  
+**Przykład:**  
+
 ```php
 
 <?php
@@ -124,17 +128,54 @@ array_push($beer, 'efik');
 print_r($beer) # array(4) { 'Perla', 2.50 , 'ID301049102' , 'efik' }
   
 ```
-  
-2. poprzez przypisanie
-  Przykład:
+Jeżeli mamy zamiar dodać 
+
+- Poprzez przypisanie
+
+**Przykład:**  
+
 ```php
   
 <?php
 $beer[] = 'efik';
    
 ```
- Skrypt zwróci dokładnie to samo co wyżej. 
+
+Skrypt zwróci dokładnie to samo co wyżej. 
+Zwróć uwagę, że nie podaliśmy numeru indeksu, co daje do zrozumienia interpreterowi, aby potraktował to jako dodanie elementu
+do istniejącej już kolekcji.
+
+Dodawanie elementów do tablicy asocjacyjnej wygląda nieco inaczej.  
+Zamiast pustych nawiasów kwadratowych, musimy podać nową nazwę klucza, do którego chcemy coś wpisać. 
+( Podając już istniejącą nazwę klucza , nadpiszemy wartość która się pod nim znajduje )
+
+```php
+
+<?php  
+  $beer = [
+   "name" => 'Perła',
+   "cost" => 2.5,
+   "currency" => 'PLN'
+   "description" => 'Najlepsze piwo dla programistów PHP'
+  ];
  
+  $beer["hello"] = "world";
+
+```
+
+- A co w sytuacji, gdy chcemy połączyć dwie tablice ze sobą?
+
+Do połączenia dwóch tablic potrzebna będzie funkcja [**array_merge**](http://php.net/manual/en/function.array-merge.php).  
+Poniżej przykład w którym łączymy dwie zupełnie różne tablice od siebie w jedną, nową.
+
+```php
+
+<?php
+$array1 = ["color" => "red"];
+$array2 = ["name" => "event15", "voice" => 0];
+$result = array_merge($array1, $array2);
+print_r($result);
+```
 
 W Usuwaniu elementów tablicy pomaga funkcja [unset\(\)](http://php.net/manual/en/function.unset.php)  
 

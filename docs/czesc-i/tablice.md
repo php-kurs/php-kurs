@@ -128,7 +128,6 @@ array_push($beer, 'efik');
 print_r($beer) # array(4) { 'Perla', 2.50 , 'ID301049102' , 'efik' }
   
 ```
-Jeżeli mamy zamiar dodać 
 
 - Poprzez przypisanie
 
@@ -166,7 +165,7 @@ Zamiast pustych nawiasów kwadratowych, musimy podać nową nazwę klucza, do kt
 - A co w sytuacji, gdy chcemy połączyć dwie tablice ze sobą?
 
 Do połączenia dwóch tablic potrzebna będzie funkcja [**array_merge**](http://php.net/manual/en/function.array-merge.php).  
-Poniżej przykład w którym łączymy dwie zupełnie różne tablice od siebie w jedną, nową.
+Poniżej przykład, w którym łączymy dwie zupełnie różne tablice od siebie w jedną, nową.
 
 ```php
 
@@ -189,6 +188,10 @@ unset($beer[2]);
 print_r($beer); # array(3) { 'Perla', 2.5 , 'efik' }
 
 ```
+Więcej informacji na temat funkcji służących do operowania na tablicach można znaleźć w oficjalnej dokumentacji PHP: 
+ 
+ - [http://php.net/manual/en/ref.array.php](http://php.net/manual/en/ref.array.php)
+
 
 # Przeglądanie tablic
 

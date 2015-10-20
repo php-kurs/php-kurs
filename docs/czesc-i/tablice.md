@@ -87,7 +87,7 @@ $beer = [];
 
 Nazwa zmiennej wskazuje, że będziemy w niej przechowywać informacje o konkretnym piwie.
 
-> **UWAGA!** Możesz spotkać się z zapisem **array()** ale jest on już nieużywany.
+> **UWAGA!** Możesz spotkać się z zapisem **array()**, ale odchodzi się już od tego zapisu na rzecz [].
 
 Możemy już w momencie deklarowania tablicy, określić jakie będzie miała elementy;
  

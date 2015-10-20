@@ -222,14 +222,19 @@ Jak myślisz, która opcja będzie bezpieczniejsza i wydajniejsza?
 ```
 
 Przeanalizujmy powyższy przykład.  
-- Opcja 1 
 
-Są miejsca w których pętle for mają dobre zastosowanie, aczkolwiek nie w przypadku tablic. 
+- **Opcja 1** 
+
+Są miejsca w których pętle **for** mają dobre zastosowanie, aczkolwiek nie w przypadku tablic. 
 Za każdym obiegiem pętli obliczana jest ilość elementów które są przechowywane. 
 Dodatkowo niepotrzebny nam jest tutaj indeks tablicy. Po co on jest, skoro poruszamy się po kolekcji użytkowników?  
 Dochodzi także niebezpieczeństwo przekroczenia zakresu !!
 
-- Opcja 2
+- [count\(\)](http://php.net/manual/en/function.count.php) - Obliczanie ilości elementów w tablicy.
+
+
+
+- **Opcja 2**
 
 Tutaj już jest dużo bezpieczniej. Nie jesteśmy narażeni na przekroczenie indeksu tablicy. Nie interesuje nas indeks, otrzymujemy
 tablicę z konkretnym użytkownikiem i wyświetlamy jego imię.
@@ -238,14 +243,16 @@ Zapewne już widzisz, że pętla foreach jest bezpieczniejsza i lepsza ? W takim
 
 Pętla foreach służy do przeglądania tablic z indeksem , a także asocjacyjnych.
 
-Ogólna konstrukcja pętli:
+___
+
+**Ogólna konstrukcja pętli:**
 
 ```php
 <?php
    
    foreach ( $array ; $key => $value ) {
       
-       // DO something with value.
+       // DO something with value o key.
    
    }
  

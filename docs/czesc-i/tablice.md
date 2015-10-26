@@ -250,7 +250,7 @@ ___
 ```php
 <?php
    
-   foreach ( $array ; $key => $value ) {
+   foreach ( $array as $key => $value ) {
       
        // DO something with value o key.
    

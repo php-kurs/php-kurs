@@ -1,6 +1,6 @@
 # Ogólnie o tablicach
 
-**Tablice w PHP odgrywają bardzo ważną rolę dlatego proszę, przeczytaj uważnie ten temat!**  
+**Tablice w PHP odgrywają bardzo ważną rolę dlatego proszę, przeczytaj ten temat bardzo uważnie!**  
 *Abyś łatwiej zrozumiał działanie tablic postaramy się pokazać to na realnych przykładach.*
 
 **Czym są tablice?**
@@ -28,7 +28,7 @@ Tablice które posiadają indeks:
   ];
 ```
  
-Tablice z kluczami, asocjacyjne.
+Asocjacyjne tablice z kluczami.
   
 ```php
 
@@ -44,11 +44,11 @@ Tablice z kluczami, asocjacyjne.
 
 ___
 
-Czasami dochodzimy do momentu w którym tablice posiadające jeden wymiar nam już nie wystarczą.
+Czasami dochodzimy do momentu w którym tablice posiadające jeden wymiar już nam nie wystarczają.
 Wtedy zastanawiamy się, czy istnieje jakiś sposób, aby dodać jeden wymiar więcej.
 
 Wyobraź sobie, że posiadasz kilka garaży, każdy garaż przechowuję kolekcję aut.  
-Chcąc się odwołać do konkretnego auta, musisz określić w jakim garażu to auto się znajduję. 
+Chcąc się odwołać do konkretnego auta, musisz określić w jakim garażu to auto się znajduje. 
 
 ```php
 
@@ -89,7 +89,7 @@ Nazwa zmiennej wskazuje, że będziemy w niej przechowywać informacje o konkret
 
 > **UWAGA!** Możesz spotkać się z zapisem **array()** ale jest on już nieużywany.
 
-Możemy już w momencie deklarowania tablicy, określić jakie będzie miała elementy;
+Możemy już w momencie deklarowania tablicy określić, jakie będzie miała elementy;
  
 ```php
 
@@ -108,7 +108,7 @@ echo $beer[1]; # 2.50
  
 ``` 
 >**Numeracja elementów tablicy zaczyna się od zera!!**   
->Często początkujący programiści zapominają o numeracji indeksów w tablicy i przekraczają zakres. 
+>Początkujący programiści często zapominają o numeracji indeksów w tablicy i przekraczają zakres. 
 
 
 Dodawanie elementów do tablicy zazwyczaj odbywa się na dwa sposoby.
@@ -145,8 +145,8 @@ Zwróć uwagę, że nie podaliśmy numeru indeksu, co daje do zrozumienia interp
 do istniejącej już kolekcji.
 
 Dodawanie elementów do tablicy asocjacyjnej wygląda nieco inaczej.  
-Zamiast pustych nawiasów kwadratowych, musimy podać nową nazwę klucza, do którego chcemy coś wpisać. 
-( Podając już istniejącą nazwę klucza , nadpiszemy wartość która się pod nim znajduje )
+Zamiast pustych nawiasów kwadratowych musimy podać nową nazwę klucza, do którego chcemy coś wpisać. 
+( Podając już istniejącą nazwę klucza nadpiszemy wartość która się pod nim znajduje )
 
 ```php
 

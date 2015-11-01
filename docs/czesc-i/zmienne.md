@@ -1,6 +1,6 @@
 # Zmienne 
 
-W PHP zmienne można rozpoznać bardzo łatwo, ponieważ zaczynają się one od znaku dolara. Należy zawsze pamiętać o tym, ponieważ zapominanie **$** przed nazwą zmiennej jest częstym błędem początkujących deweloperów. 
+W PHP zmienne można rozpoznać bardzo łatwo, ponieważ zaczynają się one od znaku dolara. Należy zawsze o tym pamiętać, ponieważ zapominanie **$** przed nazwą zmiennej jest częstym błędem początkujących deweloperów. 
 
 **Przykłady definicji zmiennych**
 
@@ -13,7 +13,7 @@ W PHP zmienne można rozpoznać bardzo łatwo, ponieważ zaczynają się one od 
 * Może to być dowolnej długości ciąg znaków alfanumerycznych: A-Z, a-z, 0-9
 * Nazwa zmiennej może zawierać w sobie znak "-" oraz "_"
 
-Jednak są rzeczy na które trzeba zwrócić uwagę. **Nie** można nazywać zmiennych zaczynając od cyfry. 
+Jednak są rzeczy na które trzeba zwrócić uwagę. Nazwa zmiennej **Nie może** zaczynać się od cyfry. 
 
 ## Co nie powinno być nazwą zmiennych w PHP?
 W większości języków programowania istnieje coś takiego jak słowa kluczowe _(ang. keywords)_. Są to takie wyrazy, których nie można używać w nazwie zmiennej. Powodem tego jest to, że te wyrazy, które można zobaczyć poniżej są zarezerwowane dla samego języka PHP. 
@@ -22,12 +22,12 @@ W większości języków programowania istnieje coś takiego jak słowa kluczowe
 [Źródło: php.net](http://php.net/manual/en/reserved.keywords.php)
 
 #  Wykorzystanie zmiennych
-Już wiemy jak wyglądają zmienne i jakich zasad powinniśmy się trzymać nazywając je w programie. Ale czym tak na prawdę są zmienne? Do czego je się wykorzystuje?
+Już wiemy jak wyglądają zmienne i jakich zasad powinniśmy się trzymać nazywając je w programie. Ale czym tak naprawdę są zmienne? Do czego je się wykorzystuje?
 
 Ten obrazek idealnie pokazuje zasadę działania zmiennych:
 ![Obrazowanie zmiennych](http://www.expresit.pl/wp-content/uploads/2014/07/%C5%9Bmieci-3.png)
 
-Zmienną nazwiemy takie miejsce w pamięci komputera, które jest w stanie przechować jakąś informację. W PHP jeżeli chcemy stworzyć miejsce dla przechowania wieku osoby zaglądającej na stronie, stworzymy zmienną $visitorAge. Dzięki temu, będziemy mogli dopisać do tej zmiennej interesujące nas informacje.
+Zmienną nazwiemy takie miejsce w pamięci komputera, które jest w stanie przechować jakąś informację. W PHP jeżeli chcemy stworzyć miejsce dla przechowania wieku osoby zaglądającej na stronę, stworzymy zmienną $visitorAge. Dzięki temu, będziemy mogli dopisać do tej zmiennej interesujące nas informacje.
 
 ```php
         $visitorAge = 12;
@@ -35,14 +35,14 @@ Zmienną nazwiemy takie miejsce w pamięci komputera, które jest w stanie przec
         echo 'Twój wiek to ' . $visitorAge . ' lat.';
 ```
 
-W powyższym skrypcie zastosowaliśmy operator konkatenacji. Jest to złączenie dwóch ciągów w jeden. Najczęściej ten operator (kropkę) stosuje się przy wyświetlaniu tekstu, tak jak wyżej to zrobiliśmy. W rzeczywistości możliwości jego wykorzystania są zależne tylko od wyobraźni dewelopera. 
+W powyższym skrypcie zastosowaliśmy operator konkatenacji. Jest to złączenie dwóch ciągów w jeden. Najczęściej ten operator (kropkę) stosuje się przy wyświetlaniu tekstu, tak, jak zrobiliśmy to wyżej. W rzeczywistości możliwości jego wykorzystania są zależne tylko od wyobraźni dewelopera. 
 
 > **UWAGA** 
 W powyższym przykładzie trzeba zwrócić szczególną uwagę na to, w jaki sposób powinno się dopisywać zmienne w wyjściowym łańcuchu tekstowym. 
 Jeżeli zapisalibyśmy _**echo '$visitorAge lat.'**_, to dostalibyśmy w wyniku taki ciąg znaków: $visitorAge lat.
 
-Kluczem są użyte apostrofy, które mają również znaczenie dla wydajności tworzonego przez nas oprogramowania. Kiedy zastosujemy znaki podwójnego cydzysłowu " ", to interpreter najpierw przeszuka dany ciąg w celu odnalezienia potencjalnych zmiennych, które mógłby zastąpić przed wyświetleniem na ekranie. 
-Kiedy użyjemy znaków pojedynczego cudzysłowu ' ' to interpreter uzna wszystko to, co jest tam wpisane za tekst. Nie wykona wtedy sprawdzenia czy w środku znajduje się zmienna. 
+Kluczem są użyte apostrofy, które mają również znaczenie dla wydajności tworzonego przez nas oprogramowania. Kiedy zastosujemy znaki podwójnego cudzysłowu " ", to interpreter najpierw przeszuka dany ciąg w celu odnalezienia potencjalnych zmiennych, które mógłby zastąpić przed wyświetleniem na ekranie. 
+Kiedy użyjemy znaków pojedynczego cudzysłowu (zapisywany jako apostrofy) ' ' to interpreter uzna wszystko to, co jest tam wpisane za tekst. Nie wykona wtedy sprawdzenia czy w środku znajduje się zmienna. 
 
 Ten mechanizm nazywamy **interpolacją zmiennych** i polega on na zastępowaniu zmiennych ich wartościami.
 
@@ -54,7 +54,7 @@ W PHP aktualnie (do wersji 5.6.*) nie mówimy bezpośrednio o typach zmiennych. 
 * obiekt
 * itp. 
 
-Jednakże w bebechach język ten wspiera osiem tzw. prymitywnych typów, są nimi:
+Jednakże jako podstawowe język ten wspiera osiem tzw. prymitywnych typów, są nimi:
 * **Skalary**: boolean, integer, float / double, string
 * **Złożone**: array, object
 * **Specjalne**: NULL, resource
@@ -75,8 +75,8 @@ Warto zdawać sobie sprawę, w jakich wypadkach zwróci logiczną prawdę gdy u�
     $isActive = '1';
     $isActive = 'false';
 ```
-Jest tak, ponieważ interpreter nie jest _case-sensitive_, czyli nie zwraca uwagi na wielkość liter w tym wypadku (oczywiście chodzi o prawą stronę). 
-Poza tym wartość **FALSE** jest zwracana tylko, gdy wartość zmiennej będzie równa zeru. Ze względu na to, że _string_ posiada w sobie wartość różną od zera, to zostanie zinterpretowany jako logiczna prawda. 
+Jest tak, ponieważ interpreter nie jest _case-sensitive_, czyli nie zwraca uwagi na wielkość liter (w tym wypadku oczywiście chodzi o prawą stronę). 
+Poza tym wartość **FALSE** jest zwracana tylko wtedy, gdy wartość zmiennej będzie równa zeru. Ze względu na to, że _string_ posiada w sobie wartość różną od zera, to zostanie zinterpretowany jako logiczna prawda. 
 
 Wyjątkiem będzie taki zapis:
 ```php
@@ -145,7 +145,7 @@ Dla systemów z procesorem 64-bitowym max dla `integer` wynosi: 9E18 (w notacji 
     $large_number =  50000000000000 * $million;
     var_dump($large_number);                   // float(5.0E+19)
 ```
-Przykład w jaki sposób działa dzielenie liczb typu całkowitoliczbowego
+Przykład w jaki sposób działa dzielenie liczb ze zbioru liczb całkowitych
 ```php
     var_dump(25/7);         // float(3.5714285714286) 
     var_dump((int) (25/7)); // int(3)
@@ -157,8 +157,8 @@ Czasem zależy nam na tym, aby zapisać na przykład cenę przedmiotu. Wiadomo, 
 
 Do  zapisu danych, które są **zmiennoprzecinkowe** służy typ `float`. Jego rozmiar jest, podobnie jak `integer`, zależny od platformy. Zwykle jego precyzja wynosi *14* miejsc po przecinku.
 
-Polecam Ci przeczytanie [tego artykułu](http://floating-point-gui.de/formats/fp/). Dla każdego programisty powinna to być ważna dawka wiedzy na temat reprezentacji liczb w komputerze. 
-Warto, żebyś przeczytał całą wiedzę z tej strony http://floating-point-gui.de/
+Polecam Ci przeczytanie [tego artykułu](http   ://floating-point-gui.de/formats/fp/). Dla każdego programisty powinna to być ważna dawka wiedzy na temat reprezentacji liczb w komputerze. 
+Warto, żebyś przeczytał całą wiedzę zawartą na tej stronie http://floating-point-gui.de/
 
 **Przykład zmiennych typu `float`:**
 ```php

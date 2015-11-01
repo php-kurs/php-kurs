@@ -1,5 +1,5 @@
 Skoro tu jesteś to znaczy, że chcesz się **uczyć**! 
-Postaramy się nauczyć Cię, jak dobrze pracować z plikami PHP. Omówimy główną strukturę pliku PHP tak, abyś potrafił odróżnić zmienną od komentarza, przekażemy kilka wskazówek dotyczących pisania kodu.
+Postaramy się nauczyć Cię jak dobrze pracować z plikami PHP. Omówimy główną strukturę pliku PHP tak, abyś potrafił odróżnić zmienną od komentarza, przekażemy również kilka wskazówek dotyczących pisania kodu.
  
 **Wygląd przykładowego pliku PHP:**
 
@@ -36,9 +36,9 @@ $kernel->terminate($request, $response);
 
 # Tagi
 
-**`<?php`** oraz **`?>`** - Jest charakterystycznym znakiem rozpoznawczym języka PHP. To, co znajduje się pomiędzy nimi, uważane jest przez interpreter jako kod właściwy, który musi obsłużyć.
+**`<?php`** oraz **`?>`** - Są to charakterystyczne znaki rozpoznawcze języka PHP. To, co znajduje się pomiędzy nimi, uważane jest przez interpreter jako kod właściwy, który musi obsłużyć.
  
-**`<?=`** oraz **`?>`** - są to specjalne tagi które zawsze będą działać, ich zadanie to wyświetlanie jakiejś wartości. Często są stosowane w skompilowanych szablonach. 
+**`<?=`** oraz **`?>`** - to są specjalne tagi które zawsze będą działać. Ich zadanie to wyświetlanie podanej wartości. Często są stosowane w skompilowanych szablonach. 
  
  **Przykład:**
 ```html
@@ -55,7 +55,7 @@ Zastępują one dokładnie taką konstrukcję:
 # Komentarze
 
 
-Komentarze w języku PHP są podobne, jak w wielu językach programowania mają podobne działanie. Służą tylko i wyłącznie dla programisty i jego kolegów.
+Komentarze w języku PHP są podobne, jak w wielu językach programowania i mają podobne działanie. Służą tylko i wyłącznie dla programisty i jego kolegów.
 
 Istnieją trzy typy komentarzy.  Są to komentarze wymienione poniżej.
 
@@ -94,7 +94,7 @@ public function find(User $user);
 
 Jak możesz zauważyć, są to komentarze dokumentacji.   
 To specjalne komentarze, dzięki którym odpowiednie oprogramowanie (np. phpDocumentor) będzie mogło szybko i łatwo sporządzić dokumentację danej klasy/funkcji.
-Oczywiście  to nie jedyne zastosowanie tych komentarzy!
+Oczywiście nie jest to jedyne zastosowanie tych komentarzy!
 Dzięki takim komentarzom inteligentne IDE są w stanie praktycznie natychmiast podpowiadać nam o co chodzi. Na przykład możemy za pomocą takiego komentarza poinformować IDE o typie zmiennej, który jest definiowany przez interfejs.
 
 ## Komentarze dla innych programistów
@@ -131,7 +131,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ```
 
 #### **Informacyjne**
-Zazwyczaj umieszczane są w jednolinikowych  `//` (patrz plik PHP na początku rozdziału) zawierają informację dla drugiego programisty o instrukcji np ładowania klas z pamięci.
+Zazwyczaj umieszczane są w jednolinikowych  `//` (patrz plik PHP na początku rozdziału) zawierają informację dla drugiego programisty o instrukcji np. ładowania klas z pamięci.
 
 ```php
 <?php
@@ -151,10 +151,10 @@ echo "Domain name is: {$matches[0]}" . PHP_EOL;
 ```
 
 #### **Zamierzeń**
-Czasem jako programiści musimy podjąć decyzje, w jaki sposób chcemy rozwiązać dany problem. Na przykład mamy do wyboru dwa typy wyjątków, które możemy użyć w danej sytuacji. Możemy w komentaru umieścić informację dlaczego w tej chwili tak zdecydowaliśmy. 
+Czasem jako programiści musimy podjąć decyzję, w jaki sposób chcemy rozwiązać dany problem. Na przykład - mamy do wyboru dwa typy wyjątków, które możemy użyć w danej sytuacji. Możemy w komentarzu umieścić informację dlaczego w tej chwili tak zdecydowaliśmy. 
 
 #### **Wyjaśnienie**
-Komentarz wyjaśniający to taki, który potrafi nam wytłumaczyć na przykład skomplikowane wyrażenie - w jednym czy dwu zdaniach. Bywa to przydatne, gdy dane wyrażenie rzeczywiście jest na tyle skomplikowane, że szybciej zrozumiemy jego ideę po przeczytaniu komentarza. 
+Komentarz wyjaśniający to taki, który potrafi nam wytłumaczyć na przykład skomplikowane wyrażenie - w jednym czy dwu zdaniach. Bywa to przydatne, gdy dane wyrażenie rzeczywiście jest na tyle zawie, że szybciej zrozumiemy jego ideę po przeczytaniu komentarza. 
 
 #### **Ostrzeżenie o konsekwencjach**
 Są zazwyczaj informacją w komentarzach jednolinikowych `//`  ostrzegającą na przykład o tym, że uruchomienie "**tego**" będzie miało poważny skutek w postaci spadku wydajności.
@@ -213,11 +213,11 @@ Ciężko było nam wybrać, co dać jako pierwszą wskazówkę, ale później do
 ## Wskazówka odnośnie pisania kodu PHP:
 
 ***Zła praktyka:***
-Mieszanie kodu PHP z HTML może się skończyć dla Ciebie tragicznie, Twojego projektu i kolaborantów.  
- Wyobraź sobie, że jesteś na miejscu pani Ewy, która dobrze zna się na HTML, ale z PHP nie miała zbytnio do czynienia. Dostała właśnie Twój projekt, ktoś tam kazał jej zmienić wygląd tabelki. Otwiera taki pomieszany plik i nie wie co tu się dzieje, zupełnie nie widzi gdzie kończy się tabelka a gdzie zaczyna. Skończyło się na tym, że zapomniała iż przez pomyłkę usunęła jakąś zmienną z kodu i bum. 
+Mieszanie kodu PHP z HTML może się skończyć dla Ciebie tragicznie, Twojego projektu i wspópracowników.  
+Wyobraź sobie, że jesteś na miejscu pani Ewy, która dobrze zna się na HTML, ale z PHP nie miała zbytnio do czynienia. Dostała właśnie Twój projekt, ktoś kazał jej zmienić wygląd tabelki. Otwiera taki pomieszany plik i nie wie co tu się dzieje, zupełnie nie widzi gdzie kończy się tabelka a gdzie zaczyna. Skończyło się na tym, że zapomniała, iż przez pomyłkę usunęła jakąś zmienną z kodu i bum. 
  
 **Dobra praktyka:**  
-Zawsze staraj się oddzielać kod PHP od HTML w swoich skryptach. Na początku będzie ciężko, ale z czasem wejdzie w nawyk. Odseparowanie warstwy widoku od warstwy logiki ułatwia bardzo pracę. 
+Zawsze staraj się oddzielać kod PHP od HTML w swoich skryptach. Na początku będzie ciężko, ale z czasem wejdzie to w nawyk. Odseparowanie warstwy widoku od warstwy logiki ułatwia bardzo pracę. 
 
 Pomyśl.
 PS. Złapiesz plusa u pracodawcy :-)
@@ -252,7 +252,7 @@ if ($userAge >= 18 && $userAcceptRules === true)
 Gdy kod osiąga taki poziom czytelności, właściwe staje się kwestionowanie
 wartości komentarza. W tym przypadku lepszy kod sprawił, że komentarz jest nadmiarowy i prawdopodobnie może zostać usunięty. W tym przypadku komentarz spełnia rolę **nagłówka** opisywanego kodu. Bez wgłębiania się w logikę metody możemy się dowiedzieć, że akurat ten blok weryfikuje warunki akceptacyjne.
 
-Gdy komentarz opisuje cały blok kodu po teście if , staje się komentarzem
+Gdy komentarz opisuje cały blok kodu po teście if, staje się komentarzem
 podsumowującym i może pozostać w programie jako nagłówek opisujący następujący po nim akapit kodu.
 
 ***
@@ -316,7 +316,7 @@ Praktycznie każdy bardziej wyszukany styl sprawia problemy przy aktualizowaniu 
 ```php
 <?php
 /*************************************
- * Program jest pięknie okomentowany *
+ * Program jest pięknie udokukomentowany *
  * Nic mu nie brakuje, a jak komuś   *
  * coś nie pasi to nie musi czytać   *
  *************************************/
@@ -337,7 +337,7 @@ Pisanie zarysu programu w postaci komentarzy jeszcze przed rozpoczęciem budowy 
 
 **Włączaj komentowanie do procesu programowania.**
 
- Alternatywą dla włączenia pisania komentarzy do procesu programowania jest pozostawienie pracy nad nimi na sam koniec projektu. Ma to jednak wiele wad. Przede wszystkim, pisanie komentarzy staje się wtedy kolejnym zadaniem do wykonania, co sprawia, że wydaje się bardziej pracochłonne niż przy komentowaniu na bieżąco.
+Alternatywą dla włączenia pisania komentarzy do procesu programowania jest pozostawienie pracy nad nimi na sam koniec projektu. Ma to jednak wiele wad. Przede wszystkim, pisanie komentarzy staje się wtedy kolejnym zadaniem do wykonania, co sprawia, że wydaje się bardziej pracochłonne niż przy komentowaniu na bieżąco.
 Dodatkowo późne pisanie komentarzy jest faktycznie bardziej pracochłonne, bo zmusza do przypominania sobie lub sprawdzania, co robią poszczególne fragmenty kodu, zamiast prostego zapisania tego, co można zapisać bez zastanowienia w trakcie tworzenia tych fragmentów. Takie komentarze są też mniej dokładne, bo łatwo zapomnieć o niektórych założeniach i drobnych szczegółach projektu.
 
 Typowy argument przeciwko komentowaniu kodu na bieżąco brzmi: 
@@ -370,7 +370,7 @@ Poniżej opisuję kilka elementów, które warto zastosować przy opisie metod z
 
 >**Opisuj założenia interfejsu.** 
 
-Dokumentowanie założeń interfejsu można traktować jako uzupełnienie innych zasad pracy z komentarzami. Jeżeli budowa procedury opiera się na jakichkolwiek założeniach dotyczących stanu przekazywanych zmiennych — wartości dopuszczalne i niedopuszczalne, kolejność elementów tablic, zainicjalizowanie pewnych danych składowych czy to, że zawierają tylko poprawne dane — opisuj te założenia albo w prologu procedury, albo przy deklaracjach danych. ***Takich informacji w komentarzach wymaga praktycznie każda procedura.***
+Dokumentowanie założeń interfejsu można traktować jako uzupełnienie innych zasad pracy z komentarzami. Jeżeli budowa procedury opiera się na jakichkolwiek założeniach dotyczących stanu przekazywanych zmiennych — wartości dopuszczalne i niedopuszczalne, kolejność elementów tablic, zainicjowanie pewnych danych składowych czy to, że zawierają tylko poprawne dane — opisuj te założenia albo w prologu procedury, albo przy deklaracjach danych. ***Takich informacji w komentarzach wymaga praktycznie każda procedura.***
 
 Dbaj też o informacje o wykorzystywanych danych globalnych. Zmienna globalna jest w równym stopniu elementem interfejsu procedury, co każda inna. Gdy w trakcie pisania procedury zauważasz, że kod wykorzystuje pewne założenia dotyczące jej interfejsu, nie zwlekaj z zapisaniem tych założeń w komentarzach.
 

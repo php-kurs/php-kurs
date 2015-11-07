@@ -87,7 +87,7 @@ $beer = [];
 
 Nazwa zmiennej wskazuje, że będziemy w niej przechowywać informacje o konkretnym piwie.
 
-> **UWAGA!** Możesz spotkać się z zapisem **array()** ale jest on już nieużywany.
+> **UWAGA!** Możesz spotkać się z zapisem **array()**, ale odchodzi się już od tego zapisu na rzecz [].
 
 Możemy już w momencie deklarowania tablicy określić, jakie będzie miała elementy;
  
@@ -195,6 +195,74 @@ Więcej informacji na temat funkcji służących do operowania na tablicach moż
 
 # Przeglądanie tablic
 
+Jeżeli operujesz na tablicach w PHP, to nie obejdziesz się bez ich przeglądania.
+Do takiego przeglądania używamy pętli **foreach** ponieważ jest ona bardzo wygodna w użyciu i daje ogromne możliwości.
+Dla pokazania różnicy pomiędzy pętlami **for**, a **foreach** przygotujemy prosty przykład.
 
+Wyobraź sobie, że masz system, który generuje Ci tablicę nieznanej długości. To co w niej się znajduję nie jest istotne.
+Jak myślisz, która opcja będzie bezpieczniejsza i wydajniejsza?
+
+```php
+
+ <?php
+  $usersCollection = $system->get('user.repository')->getAllUsers();
+  
+  // Opcja 1:
+  
+   for( $index = 0; $index < count($usersCollection); $index++){
+     echo $UsersCollection[$index]["name"] . PHP_EOL;
+   }
+   
+  // Opcja 2:
+   
+   foreach( $usersCollection as $userName) {
+     echo $userName["name"] . PHP_EOL;
+   }
+   
+```
+
+Przeanalizujmy powyższy przykład.  
+
+- **Opcja 1** 
+
+Są miejsca w których pętle **for** mają dobre zastosowanie, aczkolwiek nie w przypadku tablic. 
+Za każdym obiegiem pętli obliczana jest ilość elementów które są przechowywane. 
+Dodatkowo niepotrzebny nam jest tutaj indeks tablicy. Po co on jest, skoro poruszamy się po kolekcji użytkowników?  
+Dochodzi także niebezpieczeństwo przekroczenia zakresu !!
+
+- [count\(\)](http://php.net/manual/en/function.count.php) - Obliczanie ilości elementów w tablicy.
+
+
+
+- **Opcja 2**
+
+Tutaj już jest dużo bezpieczniej. Nie jesteśmy narażeni na przekroczenie indeksu tablicy. Nie interesuje nas indeks, otrzymujemy
+tablicę z konkretnym użytkownikiem i wyświetlamy jego imię.
+
+Zapewne już widzisz, że pętla foreach jest bezpieczniejsza i lepsza ? W takim razie wyjaśnijmy jej działanie:
+
+Pętla foreach służy do przeglądania tablic z indeksem , a także asocjacyjnych.
+
+___
+
+**Ogólna konstrukcja pętli:**
+
+```php
+<?php
+   
+   foreach ( $array as $key => $value ) {
+      
+       // DO something with value o key.
+   
+   }
+ 
+```
+
+Tłumaczymy ją tak:
+
+**Dla każdego** elementu w tablicy `$array` , pobierz jego klucz `$key` i wartość `$value` na którą wskazuję.  
+**Wykonaj** jakąś operację .  
+**Powtarzaj dopóki** nie napotkasz ostatniego elementu w tablicy `$array`. 
+`
 # Sortowanie tablic 
 

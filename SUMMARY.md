@@ -1,4 +1,4 @@
-# Summary
+# Spis Treści
 
 * [Wstęp](README.md)
 * [Część I](czesc-i/README.md)

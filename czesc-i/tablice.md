@@ -223,18 +223,23 @@ Jak myślisz, która opcja będzie bezpieczniejsza i wydajniejsza?
 
 Przeanalizujmy powyższy przykład.  
 
-- **Opcja 1** 
+
+---
+
+**Opcja 1** 
 
 Są miejsca w których pętle **for** mają dobre zastosowanie, aczkolwiek nie w przypadku tablic. 
 Za każdym obiegiem pętli obliczana jest ilość elementów które są przechowywane. 
 Dodatkowo niepotrzebny nam jest tutaj indeks tablicy. Po co on jest, skoro poruszamy się po kolekcji użytkowników?  
 Dochodzi także niebezpieczeństwo przekroczenia zakresu !!
 
-- [count\(\)](http://php.net/manual/en/function.count.php) - Obliczanie ilości elementów w tablicy.
+[count\(\)](http://php.net/manual/en/function.count.php) - Obliczanie ilości elementów w tablicy.
 
 
+---
 
-- **Opcja 2**
+
+**Opcja 2**
 
 Tutaj już jest dużo bezpieczniej. Nie jesteśmy narażeni na przekroczenie indeksu tablicy. Nie interesuje nas indeks, otrzymujemy
 tablicę z konkretnym użytkownikiem i wyświetlamy jego imię.

@@ -11,7 +11,7 @@ W PHP zmienne można rozpoznać bardzo łatwo, ponieważ zaczynają się one od 
 
 ##  Co może być nazwą zmiennych w PHP? 
 * Może to być dowolnej długości ciąg znaków alfanumerycznych: A-Z, a-z, 0-9
-* Nazwa zmiennej może zawierać w sobie znak "-" oraz "_"
+* Nazwa zmiennej może zawierać w sobie znak "_"
 
 Jednak są rzeczy na które trzeba zwrócić uwagę. Nazwa zmiennej **Nie może** zaczynać się od cyfry. 
 
@@ -25,7 +25,7 @@ W większości języków programowania istnieje coś takiego jak słowa kluczowe
 Już wiemy jak wyglądają zmienne i jakich zasad powinniśmy się trzymać nazywając je w programie. Ale czym tak naprawdę są zmienne? Do czego je się wykorzystuje?
 
 Ten obrazek idealnie pokazuje zasadę działania zmiennych:
-![Obrazowanie zmiennych](http://www.expresit.pl/wp-content/uploads/2014/07/%C5%9Bmieci-3.png)
+![Obrazowanie zmiennych](http://www.greenerpackage.com/sites/default/files/Recycling_predictions.jpg)
 
 Zmienną nazwiemy takie miejsce w pamięci komputera, które jest w stanie przechować jakąś informację. W PHP jeżeli chcemy stworzyć miejsce dla przechowania wieku osoby zaglądającej na stronę, stworzymy zmienną $visitorAge. Dzięki temu, będziemy mogli dopisać do tej zmiennej interesujące nas informacje.
 

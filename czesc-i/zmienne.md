@@ -172,3 +172,16 @@ $smallScienceFloat = 7E-10;
 
 ## Array
 ## Object
+# Dobre praktyki
+## Wyłącz mechanizm deklaracji niejawnych
+## Używaj konwencji nazewnictwa zmiennych
+## Sprawdzaj nazwy zmiennych
+## Deklaruj i definiuj zmienną możliwie blisko miejsca jej pierwszego użycia.
+## Gdy tylko jest taka możliwość, używaj final albo const
+## Zwracaj szczególną uwagę na liczniki i akumulatory
+## Korzystaj z dobrych ostrzeżeń IDE 
+## Zasada Pojedynczej odpowiedzialności - jeden cel dla jednej zmiennej
+## Unikaj ukrytych znaczeń
+
+
+# Wybieranie dobrej nazwy zmiennej

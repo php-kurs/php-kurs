@@ -1,4 +1,4 @@
-# Spis Treści
+# Summary
 
 * [Wstęp](README.md)
 * [Część I](czesc-i/README.md)
@@ -13,4 +13,5 @@
    * [Wyrażenia Regularne](czesc-i/wyrazenia-regularne.md)
    * [Ponowne wykorzystanie kodu](czesc-i/ponowne-wykorzystanie-kodu.md)
 * [Autorzy](autorzy.md)
+* Bibliografia
 

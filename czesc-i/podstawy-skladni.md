@@ -154,7 +154,7 @@ echo "Domain name is: {$matches[0]}" . PHP_EOL;
 Czasem jako programiści musimy podjąć decyzję, w jaki sposób chcemy rozwiązać dany problem. Na przykład - mamy do wyboru dwa typy wyjątków, które możemy użyć w danej sytuacji. Możemy w komentarzu umieścić informację dlaczego w tej chwili tak zdecydowaliśmy. 
 
 #### **Wyjaśnienie**
-Komentarz wyjaśniający to taki, który potrafi nam wytłumaczyć na przykład skomplikowane wyrażenie - w jednym czy dwu zdaniach. Bywa to przydatne, gdy dane wyrażenie rzeczywiście jest na tyle zawie, że szybciej zrozumiemy jego ideę po przeczytaniu komentarza. 
+Komentarz wyjaśniający to taki, który potrafi nam wytłumaczyć na przykład skomplikowane wyrażenie - w jednym czy dwu zdaniach. Bywa to przydatne, gdy dane wyrażenie rzeczywiście jest na tyle zawiłe, że szybciej zrozumiemy jego ideę po przeczytaniu komentarza. 
 
 #### **Ostrzeżenie o konsekwencjach**
 Są zazwyczaj informacją w komentarzach jednolinikowych `//`  ostrzegającą na przykład o tym, że uruchomienie "**tego**" będzie miało poważny skutek w postaci spadku wydajności.

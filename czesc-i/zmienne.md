@@ -228,6 +228,7 @@ echo 'To też nie zadziała: {$dupa}';
 ```
 ### Z cudzysłowem
 Ten sposób zapisu jest bardziej znany programistom innych języków. W PHP działa on nieco inaczej. Przede wszystkim interpreter PHP stanie się czuły na znaki specjalne, takie jak:
+
 | Znacznik  |  Znaczenie | 
 |---|---|
 | \n  | Nowa linia  | 
@@ -235,7 +236,7 @@ Ten sposób zapisu jest bardziej znany programistom innych języków. W PHP dzia
 |\t|Poziomy tabulator|
 |\v|Pionowy tabulator|
 |\\\\ |Uwidocznienie znaku: `\` |
-|\\\\$|Uwidocznienie znaku dolara `$`|
+|\\$|Uwidocznienie znaku dolara `$`|
 |\\"| Uwidocznienie znaku cudzysłowa: `"`|
 
 Istnieją jeszcze inne zapisy, umożliwiające zapisanie liczby szesnatkowej bądź ósemkowej, o których pisze [dokumentacja](http://php.net/manual/pl/language.types.string.php#language.types.string.syntax.double) jednak developerzy PHP dość rzadko wykorzystują te funkcjonalaności. Warto jednak je poznać. 

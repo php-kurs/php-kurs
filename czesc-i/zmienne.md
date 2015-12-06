@@ -261,6 +261,7 @@ Tutaj musi być coś, co muszę zamienić. Muszę przeskanować cały zapis w po
 Z tego powodu warto zapamiętać sobie, że dużo bardziej optymalnym jest stosowanie zawsze apostrofów zamiast cudzysłowów. **Najlepiej, aby to był nasz dobry nawyk**. Dopiero w chwili, gdy będzie niezbędne dodanie zmiennej do ciągu znakowego, wtedy zamień apostrofy na cudzysłowy.
 
 > **UWAGA!**
+
 > Zauważ, że stosuję zapis zmiennej w klamerkach `{ }`. 
 > Jest to celowy zabieg, który jest dobrym nawykiem. Dzięki temu doskonale widać, że stosujemy w ciągu znakowym jakąś wartość **zmienną**. Oczywiście kod zadziałałby, gdybyśmy nie wstawili klamer, jednak trudniej byłoby odnaleźć zmienną w gąszczu kodu.
 > Pamiętaj również o tym, że poprawnym zapisem jest:

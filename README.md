@@ -48,10 +48,10 @@ Zapamiętaj. Notatnik to nie IDE.
 
 W tym kursie będziemy posługiwać się dwoma IDE.
 
- 1. **Płatnym PHPStorm (najlepsze  płatne IDE dla PHP)**
- 2. **Darmowym NetBeans PHP (najlepszy darmowy IDE dla PHP)**
+ 1. **Płatnym PHPStorm (najlepsze płatne IDE dla PHP)**
+ 2. **Darmowym NetBeans PHP (najlepsze darmowe IDE dla PHP)**
 
-Pokażemy Ci, że dużo wygodniej piszę się w takim Stromie niż notatniku.
+Pokażemy Ci, że dużo wygodniej pisze się w takim Stormie niż w notatniku.
 Oczywiście, w dalszych rozdziałach dowiemy się o narzędziach służących do tworzenia testów, specyfikacji klas,  będziemy pisać kod sterowany testami.  
 
 To był tylko mały wstęp, jeżeli się nie poddasz i dotrzesz do części poświęconej testom, to gwarantujemy, że się zakochasz!

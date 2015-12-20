@@ -3,7 +3,7 @@
 * [Wstęp](README.md)
 * [Część I](czesc-i/README.md)
    * [Podstawy składni](czesc-i/podstawy-skladni.md)
-   * Komentarze (dobre)
+   * [Komentarze (dobre)](komentarze.md)
    * [Zmienne](czesc-i/zmienne.md)
    * [Stałe](czesc-i/stale.md)
    * [Zasięgi](czesc-i/zasiegi.md)

@@ -3,6 +3,7 @@
 * [Wstęp](README.md)
 * [Część I](czesc-i/README.md)
    * [Podstawy składni](czesc-i/podstawy-skladni.md)
+   * Komentarze (dobre)
    * [Zmienne](czesc-i/zmienne.md)
    * [Stałe](czesc-i/stale.md)
    * [Zasięgi](czesc-i/zasiegi.md)
@@ -12,7 +13,6 @@
    * [Pętle](czesc-i/petle.md)
    * [Wyrażenia Regularne](czesc-i/wyrazenia-regularne.md)
    * [Ponowne wykorzystanie kodu](czesc-i/ponowne-wykorzystanie-kodu.md)
-   * Komentarze (dobre)
 * [Autorzy](autorzy.md)
 * [Bibliografia](bibliografia.md)
 

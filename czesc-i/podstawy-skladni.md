@@ -203,3 +203,15 @@ if (( $employee->flags === Employee::HOURLY_FLAG) && ( $employee->age > 65 ) )
 if ( $employee->isEligibleForFullBenefits() ) 
 ```
 > Osobiście wolałbym zobaczyć przykład drugi, bo gdy czytam ten kod, to go rozumiem. Komentarz jest zbędny (***@efiku***). 
+
+## Wskazówka odnośnie pisania kodu PHP:
+
+***Zła praktyka:***
+Mieszanie kodu PHP z HTML może się skończyć dla Ciebie tragicznie, Twojego projektu i wspópracowników.  
+Wyobraź sobie, że jesteś na miejscu pani Ewy, która dobrze zna się na HTML, ale z PHP nie miała zbytnio do czynienia. Dostała właśnie Twój projekt, ktoś kazał jej zmienić wygląd tabelki. Otwiera taki pomieszany plik i nie wie co tu się dzieje, zupełnie nie widzi gdzie kończy się tabelka a gdzie zaczyna. Skończyło się na tym, że zapomniała, iż przez pomyłkę usunęła jakąś zmienną z kodu i bum. 
+ 
+***Dobra praktyka:***  
+Zawsze staraj się oddzielać kod PHP od HTML w swoich skryptach. Na początku będzie ciężko, ale z czasem wejdzie to w nawyk. Odseparowanie warstwy widoku od warstwy logiki ułatwia bardzo pracę. 
+
+Pomyśl.
+PS. Złapiesz plusa u pracodawcy :-)

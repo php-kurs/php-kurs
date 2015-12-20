@@ -6,8 +6,8 @@
 # Zapomniany operator wykonania `
 # Operator: przecinek
 # Jawne rzutowanie
-# Operator trójwarunkowy (tenary)
-# Oparator instanceof
+# Operator trójwarunkowy (ternary)
+# Operator instanceof
 # Operatory tablicowe
 # Łączenie operatorów
 # Priorytety operatorów

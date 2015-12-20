@@ -14,7 +14,7 @@
    * [Pętle](czesc-i/petle.md)
    * [Wyrażenia Regularne](czesc-i/wyrazenia-regularne.md)
    * [Ponowne wykorzystanie kodu](czesc-i/ponowne-wykorzystanie-kodu.md)
-   * [Zmienne](czesc-i/Zmienne/oki.md)
+   * [Zmienne](czesc-i/Zmienne/zmienne.md)
        * oki doki
 * [Autorzy](autorzy.md)
 * [Bibliografia](bibliografia.md)

@@ -6,6 +6,7 @@
    * [Komentarze (dobre)](czesc-i/komentarze.md)
    * [Zmienne](czesc-i/Zmienne/zmienne.md)
        * [Typy](czesc-i/Zmienne/Typy.md)
+       * Dobre praktyki
    * [Stałe](czesc-i/stale.md)
    * [Zasięgi](czesc-i/zasiegi.md)
    * [Operatory](czesc-i/operatory.md)

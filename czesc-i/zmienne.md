@@ -269,8 +269,58 @@ Z tego powodu warto zapamiętać sobie, że dużo bardziej optymalnym jest stoso
 	a nie `{ $zmienna}`, `{ $zmienna }`, czy `{ $zmienna }` 
 	*Nie powinno być w tym zapisie spacji.*
 
+### Składnia HEREDOC
+```php
+<?php
 
+$longText = <<<EOF
+Jakiś długi tekst, który może posiadać nawet
+wiele linijek
+oraz składnię <a href="#">HTML</a>
+EOF;
+```
+Składnia heredoc jest złożona z kliku elementów:
 
+ - znacznika `<<<`
+ - znacznika zakończenia, który można nazwać dowolnie - u nas: `EOF`
+ - treści tekstu
+ - użycie znacznika zakończenia
+
+Dobrą praktyką, która jest zawsze stosowana jest nazywanie znacznika zakończenia wyłącznie wielkimi literami. Najczęściej wybiera się takie akronimy, jak: EOL, EOF, END - czyli end of line, end of file, no i end. Można oczywiście nazwać je dowolnie. 
+
+W treści heredoc można stosować `enter` jako znacznik nowej linii. 
+
+Pamiętaj, że składnia heredoc działa analogicznie do napisu w cudzysłowie `" "`, dlatego interpreter PHP będzie najpierw szukał wartości zmiennych, które by mógł podmienić przy wyświetlaniu tego tekstu. 
+
+Z tego powodu wymyślono kolejny sposób wyświetlania tekstu, który jest nieco mniej znany. 
+
+**WAŻNE**
+W ostatnim elemencie heredoc, czyli wypisaniu miejsca, w którym interpreter przestanie zamieniać wszystko na łańcuch znakowy, musimy zadbać o to, aby nie znajdował się żaden inny znak w tej linii:
+```php
+<?php
+
+$longText = <<<EOF
+Jakiś długi tekst, który może posiadać nawet
+wiele linijek
+oraz składnię <a href="#">HTML</a>
+ EOF; // z przodu jest spacja - interpreter uzna to za błąd
+```
+Musimy również zadbać o to, aby na końcu tej instrukcji był średnik, gdyż on również mówi naszemu interpreterowi o zakończeniu danej instrukcji.
+
+### Składnia NOWDOC
+```php
+<?php
+
+$longText = <<<'EOF'
+Jakiś długi tekst, który może posiadać nawet
+wiele linijek
+oraz składnię <a href="#">HTML</a>
+EOD;
+```
+Składnia jest niemalże analogiczna do heredoc. Z tym, że tutaj przy nazwie znacznika końca musimy dopisać apostrofy, które mówią nam o tym, że w środku nie będzie żadnych zmiennych do podmiany. 
+
+Tutaj możesz zobaczyć różnicę:
+[heredoc vs nowdoc](https://3v4l.org/fYIgP)
 ## Array
 ## Object
 # Dobre praktyki

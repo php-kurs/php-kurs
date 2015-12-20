@@ -624,7 +624,12 @@ Pamiętaj, że nawet gdy dla Ciebie jest to czytelne zachowanie, to już dla dru
 ##Zmienne logiczne
 Warto zastanowić się nad używaniem takich nazw zmiennych logicznych:
 
- - **done** - sygnalizuje zakończenie działania jakiejś pętli lub operacji. 
+ - **done** - sygnalizuje zakończenie działania jakiejś pętli lub operacji.  
+ - **error** - sygalizuje o tym, że nastąpił jakiś błąd w programie
+ - **found** - mówi nam o tym, że szukana wartość została odnaleziona w jakimś zbiorze
+ - **succes** - informuje o poprawnym zakończeniu jakiejś operacji. Jednak jeżeli to możliwe warto zamienić jej nazwę na coś, co dokładniej nam opisze swoją funkcję. Jeżeli informacją dla nas jest zakończenie przetwarzania tekstu, lepszą nazwą będzie `processingComplete`
+ - **exists** - może być stosowana jako zmienna mówiąca nam o istnieniu bądź nie istnieniu danego obiektu. 
+
 ```php
 <?php
 
@@ -639,11 +644,6 @@ public function save(Product $newProduct)
     }    
 }
 ```
- 
- - **error** - sygalizuje o tym, że nastąpił jakiś błąd w programie
- - **found** - mówi nam o tym, że szukana wartość została odnaleziona w jakimś zbiorze
- - **succes** - informuje o poprawnym zakończeniu jakiejś operacji. Jednak jeżeli to możliwe warto zamienić jej nazwę na coś, co dokładniej nam opisze swoją funkcję. Jeżeli informacją dla nas jest zakończenie przetwarzania tekstu, lepszą nazwą będzie `processingComplete`
- - **exists** - może być stosowana jako zmienna mówiąca nam o istnieniu bądź nie istnieniu danego obiektu. 
 
 Często jednak taki sposób nazewnictwa zmiennych nie rozwiązuje naszych wszystkich problemów. Z tego powodu programiści częściej stosują takie nazwy, jak: 
 `isFound isExist isNull isDone isError isString`

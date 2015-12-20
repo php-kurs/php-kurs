@@ -1,22 +1,98 @@
 # Drogowskazy - aby dążyć do doskonałości
  
-Przyszła pora na **najważniejszą** część tego rozdziału.  Są to wskazówki, a raczej drogowskazy 
-Ciężko było nam wybrać, co dać jako pierwszą wskazówkę, ale później doszliśmy do wniosku, że nieważne co będzie pierwsze, ważne aby zostało zapamiętane!  Czytaj uważnie!
+Przyszła pora na **najważniejszą** część tego rozdziału.  Są to wskazówki, a raczej drogowskazy, które podpowiedzą Ci w jaki sposób powinno się korzystać z komentarzy w programowaniu.
+
+W książkach rozpowszechnił się pogląd, iż komentarzy trzeba stosować jak najwięcej. W momencie nauki języka programowania bywa to pomocne, ponieważ każdą linijkę możesz sobie komentować - zapisywać sposób jej działania i oczekiwany wynik. 
+
+Z wiekiem, rozwojem i wzrostem umiejętności powinieneś już zacząć unikać pewnych przyzwyczajeń. W końcu już nie jesteś początkujący i znasz działanie instrukcji `if`. Nawet jeżeli ma ona w sobie wiele warunków logicznych, to sprawnie odczytasz jej intencje. 
+
+Na początek przyjrzyj się temu programowi:
+```php
+<?php 
+$unsorted = [43,21,2,1,9,24,2,99,23,8,7,114,92,5];
+ 
+function quick_sort($array)
+{
+    // find array
+    $length = count($array);
+     
+    // base case test, if array of length 0 then just return array to caller
+    if($length <= 1){return $array;}
+    else{   
+        // select an item to act as our pivot point, since list is unsorted first position is easiest
+        $pivot = $array[0];
+         
+        // declare our two arrays to act as partitions
+        $left = $right = array();
+         
+        // loop and compare each item in the array to the pivot value, place item in appropriate partition
+        for($i = 1; $i < count($array); $i++){
+            if($array[$i] < $pivot){$left[] = $array[$i];    }
+            else{   $right[] = $array[$i];  }
+        }
+         
+        // use recursion to now sort the left and right lists
+        return array_merge(quick_sort($left), array($pivot), quick_sort($right));
+    }
+}
+ 
+$sorted = quick_sort($unsorted);
+print_r($sorted);
+```
+Jest to przykład algorytmu QuickSort, który jest wykorzystywany do szybkiego sortowania tablicy danych. Gdybyśmy zaufali programiście, który to pisał i przeczytali jego komentarze, dostalibyśmy masę nieprawdziwych informacji. Do tego sam algorytm sortowania QuickSort jest na tyle znany, że tak przytłaczająca ilość komentarzy staje się zbędna - gdybyśmy dali jeden komentarz informujący o stosowanym tutaj algorytmie. 
+
+Porównaj ten kod z poniższym:
+```php
+$unsorted = array(43,21,2,1,9,24,2,99,23,8,7,114,92,5);
+ 
+function quick_sort($array)
+{
+    $length = count($array);
+
+    if($length <= 1) {
+        return $array;
+    } else {
+        $pivot = $array[0];
+        $left = $right = array();
+
+        for($i = 1; $i < count($array); $i++) {
+            if($array[$i] < $pivot) {
+                $left[] = $array[$i];
+            } else {
+                $right[] = $array[$i];
+            }
+        }
+        
+        return array_merge(
+            quick_sort($left), 
+            array($pivot),
+            quick_sort($right)
+        );
+    }
+}
+ 
+$sorted = quick_sort($unsorted);
+print_r($sorted);
+```
+
+ - Sama nazwa funkcji mówi nam o tym co robi - komentarz staje się zbędny. 
+ - Algorytm QuickSort jest znany i doskonale opisany w książkach, w Internecie, gdziekolwiek. Komentarze odnośnie jego działania również są zbędne.
+
+Jeżeli chcesz dowiedzieć się więcej o poprawnym komentowaniu zapraszam do dalszej lektury.
+
+Ciężko było nam wybrać, co dać jako pierwszą wskazówkę, dlatego doszliśmy do wniosku, że nieważne co będzie pierwsze, ważne aby zostało zapamiętane!  Czytaj uważnie!
+
+***Spis treści***
+ - pisz **dlaczego**, a nie jak
+ - przygotuj czytelnika do tego, co będzie w kodzie **poniżej**
+ - każdy komentarz ma znaczenie
+ - unikaj skrótów
+ - nie bądź artystą komentarzy - mają być praktyczne, a nie piękne
+ - stosuj komentarz możliwie blisko kodu, który opisuje
+
  ___
 
-## Wskazówka odnośnie pisania kodu PHP:
-
-***Zła praktyka:***
-Mieszanie kodu PHP z HTML może się skończyć dla Ciebie tragicznie, Twojego projektu i wspópracowników.  
-Wyobraź sobie, że jesteś na miejscu pani Ewy, która dobrze zna się na HTML, ale z PHP nie miała zbytnio do czynienia. Dostała właśnie Twój projekt, ktoś kazał jej zmienić wygląd tabelki. Otwiera taki pomieszany plik i nie wie co tu się dzieje, zupełnie nie widzi gdzie kończy się tabelka a gdzie zaczyna. Skończyło się na tym, że zapomniała, iż przez pomyłkę usunęła jakąś zmienną z kodu i bum. 
- 
-**Dobra praktyka:**  
-Zawsze staraj się oddzielać kod PHP od HTML w swoich skryptach. Na początku będzie ciężko, ale z czasem wejdzie to w nawyk. Odseparowanie warstwy widoku od warstwy logiki ułatwia bardzo pracę. 
-
-Pomyśl.
-PS. Złapiesz plusa u pracodawcy :-)
-
-## Wskazówka: *piękne komentarze*
+## **Dlaczego** a może *jak*?
 
 Niech komentarze wyjaśniają „*dlaczego*”, a nie „*jak*”. 
 
@@ -41,18 +117,32 @@ Można zrobić jeszcze lepszy komentarz, który obejmuje sobą *zachowanie* dane
 ```php
 <?php
 // Sprawdzenie warunków dostępu do strony
-if ($userAge >= 18 && $userAcceptRules === true)
+if ($userAge            >=  18 
+    && $userAcceptRules === true
+) {
+    // ...
+}
 ```
 Gdy kod osiąga taki poziom czytelności, właściwe staje się kwestionowanie
-wartości komentarza. W tym przypadku lepszy kod sprawił, że komentarz jest nadmiarowy i prawdopodobnie może zostać usunięty. W tym przypadku komentarz spełnia rolę **nagłówka** opisywanego kodu. Bez wgłębiania się w logikę metody możemy się dowiedzieć, że akurat ten blok weryfikuje warunki akceptacyjne.
+wartości komentarza. 
+
+W tym przypadku lepszy kod sprawił, że komentarz jest nadmiarowy i prawdopodobnie może zostać usunięty. W tym przypadku komentarz spełnia rolę **nagłówka** opisywanego kodu. Bez wgłębiania się w logikę metody możemy się dowiedzieć, że akurat ten blok weryfikuje warunki akceptacyjne.
 
 Gdy komentarz opisuje cały blok kodu po teście if, staje się komentarzem
 podsumowującym i może pozostać w programie jako nagłówek opisujący następujący po nim akapit kodu.
 
 ***
-**Używaj komentarzy, aby przygotować czytającego kod na dalszy ciąg**. 
-
+##Przygotuj czytającego kod na dalszy ciąg 
 Dobre komentarze informują czytającego kod o tym, czego powinien się spodziewać. 
+```php
+<?php
+if($user->hasMoney()) {
+    // 450 lines of code with too much if's
+    
+} //endif($user->hasMoney())
+```
+Powyżej jest przykład złego komentarza, który mówi nam o tym, jakiego kawałku kodu dotyczy. Jeżeli korzystamy z środowiska programistycznego, zamiast edytora tekstu - taki problem nas nie dotyczy. Kiedy wskażemy kursorem na zamykającą klamrę - IDE pokaże nam automatycznie początek tej instrukcji. Dlatego coraz częściej ten typ komentarzy jest uważany za zbędny.
+
 Osoba czytająca program powinna mieć możliwość przejrzenia samych
 tylko komentarzy i uzyskania dobrego obrazu tego, co dany kod robi i gdzie
 znaleźć poszczególne operacje. Wynika z tego między innymi zasada, że komentarz powinien zawsze poprzedzać to, co opisuje. 
@@ -62,7 +152,8 @@ znaleźć poszczególne operacje. Wynika z tego między innymi zasada, że komen
 ```php
 <?php
 // Metoda sprawdza poprawność NIP
-public function verifyNIP(NIP $nip) { 
+public function verifyNIP(NIP $nip) 
+{ 
     // ...
 }
 ```
@@ -82,13 +173,13 @@ Unikaj wszelkich skrótów poza najbardziej oczywistymi. Gdy nie wpisujesz komen
 
 **Błędne użycie komentarzy:**
 ```php
-<?php
+<?php BŁĘDNY KOD
 $foundNumber = $this->searchNumber(); // Szuka liczby
 $foundDigit  = $this->searchDigit();  // Szuka cyfry
 $foundChar   = $this->searchChar();   // Szuka literki
 ```
 ***
-**Opisuj komentarzami wszystko, co ma związek z błędami i  nieudokumentowanymi cechami języka lub środowiska.** 
+**Opisuj komentarzami wszystko to, co ma związek z błędami i  nieudokumentowanymi cechami języka lub środowiska.** 
 
 Jeżeli masz do czynienia z błędem, jest on prawdopodobnie nieudokumentowany. Nawet jeżeli został gdzieś opisany, nie zaszkodzi dodatkowy opis w kodzie. Jeżeli masz do czynienia z nieudokumentowaną cechą języka lub środowiska, to niejako z definicji brak jakiegokolwiek jej opisu i powinien on znaleźć się w programie.
 
@@ -108,7 +199,7 @@ Starając się opisać kod, koncentruj się przede wszystkim na samym kodzie.
 
 Praktycznie każdy bardziej wyszukany styl sprawia problemy przy aktualizowaniu komentarzy i kodu. Spróbuj na przykład wskazać w poniższych komentarzach część, która jest najbardziej narażona na ignorowanie przez programistów wprowadzających zmiany:
 ```php
-<?php
+<?php UWAGA ZŁY KOD
 /*************************************
  * Program jest pięknie udokukomentowany *
  * Nic mu nie brakuje, a jak komuś   *
@@ -122,10 +213,17 @@ Praktycznie każdy bardziej wyszukany styl sprawia problemy przy aktualizowaniu 
 ```
 Istotną rzeczą jest to, aby zwracać uwagę na to, **jak wykorzystywany jest czas poświęcany na pracę z kodem**. Jeżeli spędzasz dużo czasu, wprowadzając i usuwając poziome kreski, aby dopasować długość podkreśleń do długości komentarzy, to **nie jest** to już programowanie, ale proste *marnotrawienie* czasu. Lepiej znaleźć inny, praktyczniejszy styl komentarzy. 
 
-***
-**Aby zredukować czas poświęcany na pisanie komentarzy, używaj procesu programowania w pseudokodzie.**
-
-Pisanie zarysu programu w postaci komentarzy jeszcze przed rozpoczęciem budowy właściwego kodu niesie ze sobą kilka istotnych korzyści. Gdy kończy się praca z kodem, komentarze są już gotowe. Nie ma potrzeby poświęcania na nie dodatkowego czasu. Zyskujesz także wszystko to, co daje pisanie wysokopoziomowego pseudokodu przed utworzeniem niskopoziomowego kodu w języku programowania.
+```php
+<?php
+ /** 
+  * Dobrze wykonany komentarz,
+  * który w przejrzysty i poprawny sposób
+  * informuje o funkcjonalności
+  * oraz jest prosty w edycji,
+  * przez co jest możliwe szybkie
+  * jego edytowanie
+  */
+```
 
 ***
 
@@ -137,7 +235,7 @@ Dodatkowo późne pisanie komentarzy jest faktycznie bardziej pracochłonne, bo 
 Typowy argument przeciwko komentowaniu kodu na bieżąco brzmi: 
 >Gdy koncentrujesz się na pracy z kodem, nie powinieneś rozpraszać się, pisząc komentarze. 
 
-Kod, który wymaga tak mocnej koncentracji, to ważny sygnał ostrzegawczy.
+**Kod, który wymaga tak mocnej koncentracji, to ważny sygnał ostrzegawczy.**
 
 Jeżeli projekt jest trudny do zapisania w postaci kodu programu, uprość taki
 projekt, jeszcze zanim zaczniesz zajmować się komentarzami czy kodem. Jeżeli użyjesz do uporządkowania swoich zamysłów pseudokodu, pisanie kodu stanie się proste, a komentarze powstaną automatycznie.

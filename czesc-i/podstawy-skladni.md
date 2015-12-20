@@ -68,7 +68,7 @@ Istnieją trzy typy komentarzy.  Są to komentarze wymienione poniżej.
  *  Komentarz
  */
 ```
-Rozpoczynają się od /* a kończą  \*/. Oczywiście w tym przykładzie nie jest konieczne co nową linię wstawiać "gwiazdkę". 
+Rozpoczynają się od `/*` a kończą  `*/`. Oczywiście w tym przykładzie nie jest konieczne co nową linię wstawiać "gwiazdkę". 
 
 ## Jednoliniowe
 

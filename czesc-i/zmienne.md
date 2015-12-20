@@ -321,8 +321,67 @@ Składnia jest niemalże analogiczna do heredoc. Z tym, że tutaj przy nazwie zn
 
 Tutaj możesz zobaczyć różnicę:
 [heredoc vs nowdoc](https://3v4l.org/fYIgP)
+
 ## Array
+Typ ten został dobrze opisany w rozdziale poświęconym wyłącznie tablicom, dlatego tutaj przedstawię tylko zarys tego, czym są tablice w PHP.
+
+Tablica w PHP jest to mapa, zbiór elementów określonego typu. Inne języki przyzwyczaiły nas do tego, że w tablicy danego typu muszą być elementy wyłącznie tego typu.
+
+W PHP jest tak, że elementem tablicy może być `string`, `integer` i `float`, a nawet obiekt jakiejś klasy.
+
+Przykładowa tablica w PHP:
+```php
+<?php
+$languages = [
+    'pl',
+    'en',
+    'cz',
+    'rus'
+];
+```
 ## Object
+Jako, iż PHP jest jezykiem obiektowym posiada wbudowany typ obiektowy `Object	`. Aby stworzyć nowy obiekt należy użyć operatora `new` do utworzenia nowej instancji tegoż obiektu. Jest to bardzo proste, spójrz:
+```php
+<?php
+
+class Person 
+{
+	private $age = 18;
+    
+    public function showAge()
+    {
+        echo "Mam {$this->age} lat.";
+    }
+}
+
+$matureBoy = new Person;
+$matureBoy->showAge();
+```
+
+Oczywiście programowanie oparte na obiektach to ogromny dział, dlatego w swoim kursie poświęciliśmy na ten temat osobną część. Dowiesz się w niej dużo więcej szczegółów i poznasz zasady, które rządzą w dobrym projektowaniu kodu. 
+
+### NULL
+Specjalna wartość NULL reprezentuje zmienną bez wartości. NULL jest jedyną wartością typu null.
+
+Zmienna zwraca `null` tylko wtedy, gdy:
+
+ - zostało jej przypisane na stałe NULL
+ - nie została przypisana jej żadna wartość
+ - została na niej użyta funkcja `unset()`
+
+Do zmiennej możemy przypisać NULL na dwa sposoby:
+```php
+<?php
+
+$first = NULL;
+$second = 12;
+
+unset($second);
+```
+
+###Resources
+Resoure to specjalna zmienna, która przechowuje referencję to zewnętrznego obiektu resource. Te obiektu są tworzone i używane przez specjalne funkcje, które możesz obejrzeć [tutaj](http://php.net/manual/en/resource.php).
+
 # Dobre praktyki
 ## Wyłącz mechanizm deklaracji niejawnych
 ## Używaj konwencji nazewnictwa zmiennych

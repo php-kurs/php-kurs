@@ -5,6 +5,7 @@
    * [Podstawy składni](czesc-i/podstawy-skladni.md)
    * [Komentarze (dobre)](czesc-i/komentarze.md)
    * [Zmienne](czesc-i/zmienne.md)
+   * Typy
    * [Stałe](czesc-i/stale.md)
    * [Zasięgi](czesc-i/zasiegi.md)
    * [Operatory](czesc-i/operatory.md)
@@ -13,7 +14,6 @@
    * [Pętle](czesc-i/petle.md)
    * [Wyrażenia Regularne](czesc-i/wyrazenia-regularne.md)
    * [Ponowne wykorzystanie kodu](czesc-i/ponowne-wykorzystanie-kodu.md)
-   * Typy
 * [Autorzy](autorzy.md)
 * [Bibliografia](bibliografia.md)
 

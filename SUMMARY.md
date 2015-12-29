@@ -6,7 +6,7 @@
    * [Komentarze (dobre)](czesc-i/komentarze.md)
    * [Zmienne](czesc-i/Zmienne/zmienne.md)
        * [Dobre praktyki](czesc-i/Zmienne/Dobre-praktyki.md)
-       * Typy zmiennych
+       * [Typy](czesc-i/Zmienne/Typy zmiennych/Typy.md)
            * Integer
    * [Stałe](czesc-i/stale.md)
    * [Zasięgi](czesc-i/zasiegi.md)

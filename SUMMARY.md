@@ -9,7 +9,7 @@
            * [Integer](czesc-i/Zmienne/Typy zmiennych/Integer.md)
            * [Float](czesc-i/Zmienne/Typy zmiennych/Float.md)
            * [String](czesc-i/Zmienne/Typy zmiennych/String.md)
-           * Array
+           * [Array](czesc-i/Zmienne/Typy zmiennych/Array.md)
        * [Dobre praktyki](czesc-i/Zmienne/Dobre-praktyki.md)
    * [Stałe](czesc-i/stale.md)
    * [Zasięgi](czesc-i/zasiegi.md)

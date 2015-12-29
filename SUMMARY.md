@@ -7,7 +7,7 @@
    * [Zmienne](czesc-i/Zmienne/zmienne.md)
        * [Dobre praktyki](czesc-i/Zmienne/Dobre-praktyki.md)
        * [Typy](czesc-i/Zmienne/Typy zmiennych/Typy.md)
-           * Integer
+           * [Integer](czesc-i/Zmienne/Typy zmiennych/Integer.md)
    * [Stałe](czesc-i/stale.md)
    * [Zasięgi](czesc-i/zasiegi.md)
    * [Operatory](czesc-i/operatory.md)

@@ -1,9 +1,17 @@
-# Spis Treści
+# Summary
 
 * [Wstęp](README.md)
 * [Część I](czesc-i/README.md)
    * [Podstawy składni](czesc-i/podstawy-skladni.md)
-   * [Zmienne](czesc-i/zmienne.md)
+   * [Komentarze (dobre)](czesc-i/komentarze.md)
+   * [Zmienne](czesc-i/Zmienne/zmienne.md)
+       * [Typy](czesc-i/Zmienne/Typy zmiennych/Typy.md)
+           * [Integer](czesc-i/Zmienne/Typy zmiennych/Integer.md)
+           * [Float](czesc-i/Zmienne/Typy zmiennych/Float.md)
+           * [String](czesc-i/Zmienne/Typy zmiennych/String.md)
+           * [Array](czesc-i/Zmienne/Typy zmiennych/Array.md)
+           * Object
+       * [Dobre praktyki](czesc-i/Zmienne/Dobre-praktyki.md)
    * [Stałe](czesc-i/stale.md)
    * [Zasięgi](czesc-i/zasiegi.md)
    * [Operatory](czesc-i/operatory.md)
@@ -13,4 +21,5 @@
    * [Wyrażenia Regularne](czesc-i/wyrazenia-regularne.md)
    * [Ponowne wykorzystanie kodu](czesc-i/ponowne-wykorzystanie-kodu.md)
 * [Autorzy](autorzy.md)
+* [Bibliografia](bibliografia.md)
 

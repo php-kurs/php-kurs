@@ -3,7 +3,7 @@
 # Cześć!
 
 Stwierdziliśmy, że wiedzą trzeba się dzielić. 
-Jak to pisali starożytni Rzymianie "Exegi monumentum aere perennius" - wzniosłem pomnik twalszy niż ze spiżu. Bo właśnie wiedza jest tym, co po nas pozostanie. Uważamy, że dostęp do interesującej nas wiedzy powinien być darmowy.  
+Jak to pisali starożytni Rzymianie "Exegi monumentum aere perennius" - wzniosłem pomnik trwalszy niż ze spiżu. Bo właśnie wiedza jest tym, co po nas pozostanie. Uważamy, że dostęp do interesującej nas wiedzy powinien być darmowy.  
 Zarówno ja [@efiku](https://github.com/efiku) jak i [@event15](https://github.com/event15) jesteśmy wyznawcami  idei Open Source.  
 Ale niestety nie jesteśmy bajkopisarzami i nie potrafimy wymyślić lepszego wstępu. 
 Zachęcamy jednak do przejrzenia tego, co mamy do zaoferowania.
@@ -19,7 +19,7 @@ Każda część jest zależna od poprzedniej i jest trudniejsza.
 
 Stworzone na podstawie wersji **PHP 5.6+** oraz zbioru osobistych doświadczeń.
 
-Zakładamy, że stawiałeś już pierwsze kroki w PHP, średniki Ci nie straszne i potrafisz odnaleźć grecki znak zapytania w kodzie podmieniony za średnik.
+Zakładamy, że stawiałeś już pierwsze kroki w PHP, średniki Ci nie straszne i znasz żart z greckim znakiem zapytania w kodzie.
 ___
 
 # Estetyka kodu: 
@@ -48,10 +48,10 @@ Zapamiętaj. Notatnik to nie IDE.
 
 W tym kursie będziemy posługiwać się dwoma IDE.
 
- 1. **Płatnym PHPStorm (najlepsze  płatne IDE dla PHP)**
- 2. **Darmowym NetBeans PHP (najlepszy darmowy IDE dla PHP)**
+ 1. **Płatnym PHPStorm (najlepsze płatne IDE dla PHP)**
+ 2. **Darmowym NetBeans PHP (najlepsze darmowe IDE dla PHP)**
 
-Pokażemy Ci, że dużo wygodniej piszę się w takim Stromie niż notatniku.
+Pokażemy Ci, że dużo wygodniej pisze się w takim Stormie niż w notatniku.
 Oczywiście, w dalszych rozdziałach dowiemy się o narzędziach służących do tworzenia testów, specyfikacji klas,  będziemy pisać kod sterowany testami.  
 
 To był tylko mały wstęp, jeżeli się nie poddasz i dotrzesz do części poświęconej testom, to gwarantujemy, że się zakochasz!

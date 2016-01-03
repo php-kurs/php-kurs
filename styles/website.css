@@ -1,0 +1,8 @@
+/* CSS for website */
+
+code {
+        word-wrap: break-word;
+}
+.page-inner {
+    max-width: 900px !important;
+}

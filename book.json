@@ -1,0 +1,11 @@
+{
+    "plugins": [
+        "github",
+        "github-buttons"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/efiku/php-kurs"
+        }
+    }
+}

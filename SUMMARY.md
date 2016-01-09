@@ -3,7 +3,7 @@
 * [Wstęp](README.md)
 * [Część I](czesc-i/README.md)
    * [Podstawy składni](czesc-i/podstawy-skladni.md)
-   * [Komentarze (dobre)](czesc-i/komentarze.md)
+   * [Jak dobrze komentować](czesc-i/komentarze.md)
    * [Zmienne](czesc-i/Zmienne/zmienne.md)
        * [Typy](czesc-i/Zmienne/Typy zmiennych/Typy.md)
            * [Integer](czesc-i/Zmienne/Typy zmiennych/Integer.md)

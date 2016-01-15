@@ -5,7 +5,7 @@
     ],
     "pluginsConfig": {
         "github": {
-            "url": "https://github.com/efiku/php-kurs"
+            "url": "https://github.com/php-kurs/php-kurs"
         }
     }
 }

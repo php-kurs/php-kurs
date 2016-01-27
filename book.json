@@ -1,7 +1,8 @@
 {
     "plugins": [
         "github",
-        "github-buttons"
+        "github-buttons",
+        "sitemap"
     ],
     "pluginsConfig": {
         "github": {

@@ -3,11 +3,13 @@
         "github",
         "github-buttons",
         "sitemap",
-        "rss"
     ],
     "pluginsConfig": {
         "github": {
             "url": "https://github.com/php-kurs/php-kurs"
+        }
+        "sitemap": {
+            "hostname": "https://php-kurs.gitbooks.io/phpkurs/content/"
         }
     }
 }

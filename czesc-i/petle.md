@@ -92,4 +92,35 @@ do {
 ```
 
 ## Foreach
+Pętla foreach została omowiona w rozdziale o Tablicach. Jednakze jest to obecnie najlepsze wyjście jeżeli chodzi o przeglądanie tablic.
+**foreach** można też wykorzystać z generatorami. W poniższym przykładzie zbudowaliśmy sobie generator liczb od 1 do 10. Oczywiście `range()` zachowuje się w dokładnie taki sam sposób.
+
+[Prosty przykład](https://3v4l.org/QGMKZ):
+
+```php
+<?php
+function gen_one_to_ten() {
+    for ($i = 1; $i <= 10; $i++) {
+        // Note that $i is preserved between yields.
+        yield $i;
+    }
+}
+
+foreach (gen_one_to_ten() as $number) {
+    echo "$number\n";
+}
+```
+**Rezultat:**
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
 

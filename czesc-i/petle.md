@@ -90,3 +90,6 @@ do {
 } while ($zmienna < 5);
 
 ```
+
+## Foreach
+

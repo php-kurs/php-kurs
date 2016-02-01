@@ -1,6 +1,6 @@
 # PĘTLE W PHP
 
-Istnieją 4 pętle, które warto znać. Omówimy je wszystkie, a także powiemy które pętle kiedy należy stosować. Pamiętaj, że to do Ciebie należy wybór której pętli użyjesz w kodzie w danym momencie. Należy się dobrze zastanowić!
+Istnieją 4 pętle, które warto znać. Omówimy je wszystkie, a także powiemy które pętle, kiedy należy stosować. Pamiętaj, że to do Ciebie należy wybór, której pętli użyjesz w kodzie w danym momencie. Należy się dobrze zastanowić!
 
 ## FOR
 
@@ -14,10 +14,10 @@ Pętlę for można stosować do wyświetlania różnych danych, poruszania si�
   
 **Omówienie**:
 
-* `{1}` Zmienna iteracyjna której przypisujemy jakąś początkową wartość. **Uwaga! Wiele osób sotosuje zapis $i zapominając o estetyce kodu. Skracanie zmiennych w pętlach powoduje zaciemnienie kodu!**
-* `{2}` Wykonuj warunek dopóki warunek nie zostanie spełniony.
-* `{3}` W tym miejscu zwiększamy/zmniejszamy zmienną albo przypisujemy jej inną wartość.
-* `{4}` Tutaj wykonujemy operacje na danych
+* `{1}` Zmienna iteracyjna, której przypisujemy jakąś początkową wartość. **Uwaga! Wiele osób stosuje zapis $i zapominając o estetyce kodu. Skracanie zmiennych w pętlach powoduje zaciemnienie kodu!**
+* `{2}` Wykonuj warunek, dopóki warunek nie zostanie spełniony.
+* `{3}` Wykonuj warunek, dopóki warunek nie zostanie spełniony. W tym miejscu zwiększamy/zmniejszamy zmienną albo przypisujemy jej inną wartość.
+* `{4}` Tutaj wykonujemy operacje na danych.
   
  **[Przykład](https://3v4l.org/jblAe):**
   ```php
@@ -41,12 +41,12 @@ Ach te zasiegi zmiennych...
  }
 
 ```
-Z pętlą while spotkasz się w momencie gdy będziesz chciał pobrać kilka rekordów z bazy. Co nie zmienia faktu, że to zależy od Ciebie gdzie ją wykorzystasz.
+Z pętlą while spotkasz się w momencie, gdy będziesz chciał pobrać kilka rekordów z bazy. Co nie zmienia faktu, że to zależy od Ciebie, gdzie ją wykorzystasz.
 
 **Omówienie:**
  
- * `{1}` Wykonuj pętlę dopóki warunek nie zwróci "**false**"
- * `{2}` Operacje wewnątrz pętli
+ * `{1}` Wykonuj pętlę, dopóki warunek nie zwróci "**false**"
+ * `{2}` Operacje wewnątrz pętli.
  
  **[Przykład](https://3v4l.org/dSXMJ):**
  ```php
@@ -71,7 +71,7 @@ Z pętlą while spotkasz się w momencie gdy będziesz chciał pobrać kilka rek
    while ( {2} );
  
  ```
- To już najżadziej spotykana pętla w PHP. Różnica jest taka, że warunek pętli spełniany jest na końcu. Wiec wykona się ona co najmniej raz! Trzeba uważać w tworzeniu takiej pętli.
+To już najrzadziej spotykana pętla w PHP. Różnica jest taka, że warunek pętli spełniany jest na końcu. Wiec wykona się ona co najmniej raz! Trzeba uważać w tworzeniu takiej pętli.
  
 **Omówienie:**
 

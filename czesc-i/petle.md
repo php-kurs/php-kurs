@@ -91,6 +91,7 @@ do {
 
 ```
 
+
 ## Foreach
 Pętla foreach została omowiona w rozdziale o Tablicach. Jednakze jest to obecnie najlepsze wyjście jeżeli chodzi o przeglądanie tablic.
 **foreach** można też wykorzystać z generatorami. W poniższym przykładzie zbudowaliśmy sobie generator liczb od 1 do 10. Oczywiście `range()` zachowuje się w dokładnie taki sam sposób.

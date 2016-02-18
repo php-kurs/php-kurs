@@ -16,4 +16,11 @@ Przykład:
  
 ```
 
+# Zasięg stałych
+
+Każda stała będzie posiadała domyślnie zasięg globalny. Oznacza to, że jak zdefiniujemy stałą na początku skryptu, to będzie ona dostępna we wszystkich
+skryptach, które wczytujemy.
+Obecnie w PHP programiści wolą stosować stałe w klasach, gdyż jest to rozwiązanie bardziej
+bezpieczne dla aplikacji.
+
 

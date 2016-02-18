@@ -66,3 +66,19 @@ Więcej informacji o predefiniowanych stałych znajdziesz tutaj: [PHP Manual - C
  5. `PHP_INT_MAX` Maksymalna wartość dla typu Integer
  6. `PHP_INT_MIN` Minimalna wartość dla typu Integer
  7. `DIRECTORY_SEPARATOR` Warto znać. Zwraca separator przejścia do następnego katalogu. Windows \\ , linux /
+
+# Magiczne stałe
+
+To w zasadzie nie są stałe, gdyż ich wartość zmienia się w trakcie trwania skryptu. Nie możemy ich nadpisać, możemy je jedynie odczytać.
+Czasami można je wykorzystać do bardziej "swojego" sposobu wyświetlania błędów.
+Ale nie zapominajmy, że na produkcji błędy nie mają prawa się ujawnić. Mają trafić do logów!
+Co zawierają w sobie takie *Magiczne stałe?*
+
+1. `__LINE__`	Zwraca aktualna linię wykonywanego skryptu
+2. `__FILE__`	Zwraca ścieżkę bezwzględną wraz z rozwiązanymi dowiązaniami symbolicznymi. Jeżeli użyta wewnątrz dołączonego pliku, zwraca jego nazwę.
+3. `__DIR__`	Nazwa katalogu w którym skrypt jest wykonywany. Odpowiada dirname(__FILE__). Zwracana nazwa nie zawiera końcowego ukośnika, chyba że jest to katalog root.
+4. `__FUNCTION__`	Nazwa aktualnie wykonywanej funkcji
+5. `__CLASS__`	Nazwa klasy wraz z przestrzenią nazw.
+6. `__TRAIT__`	Nazwa dołączonego do klasy traita włącznie z przestrzenią nazw.
+7. `__METHOD__`	Metoda klasy
+8. `__NAMESPACE__`	Nazwa aktualnej przestrzeni nazw.

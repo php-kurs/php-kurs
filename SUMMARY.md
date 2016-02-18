@@ -20,6 +20,9 @@
    * [Pętle](czesc-i/petle.md)
    * [Wyrażenia Regularne](czesc-i/wyrazenia-regularne.md)
    * [Ponowne wykorzystanie kodu](czesc-i/ponowne-wykorzystanie-kodu.md)
+* [Część V](czesc-v/README.md) 
+    * [Pisanie stron obiektowo](czesc-v/pisanie-stron-obiektowo.md) 
+    * [Czas życia skryptu](czesc-v/lifetimePHP.md) 
 * [Autorzy](autorzy.md)
 * [Bibliografia](bibliografia.md)
 

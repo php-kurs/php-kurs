@@ -53,3 +53,16 @@ echo ANIMALS[1]; // outputs "cat"
 
 ```
 Link do przykładu: [https://3v4l.org/HOINP](https://3v4l.org/HOINP)
+
+# Predefiniowane stałe
+
+Są to stałe pochodzące prosto z samego silnika PHP. Nie wszystkie warto znać, dlatego pokażemy najważniejsze z nich, które czasami uratują Twoj projekt..
+Więcej informacji o predefiniowanych stałych znajdziesz tutaj: [PHP Manual - Core Constants](http://php.net/manual/en/reserved.constants.php)
+
+ 1. `PHP_VERSION` Aktualna wersja PHP jako ciąg znaków. np 7.0.3-zts.
+ 2. `PHP_VERSION_ID` Wersja PHP przedstawiona jako liczba całkowita np. 70003.
+ 3. `PHP_OS` Zwraca nazwę systemu operacyjnego na którym uruchomione jest PHP.
+ 4. `PHP_EOL` Ważna stała wypada ją zapamiętać. Zwraca ona znaki końca nowej linii zależne od systemu na którym PHP jest uruchomiony.
+ 5. `PHP_INT_MAX` Maksymalna wartość dla typu Integer
+ 6. `PHP_INT_MIN` Minimalna wartość dla typu Integer
+ 7. `DIRECTORY_SEPARATOR` Warto znać. Zwraca separator przejścia do następnego katalogu. Windows \\ , linux /

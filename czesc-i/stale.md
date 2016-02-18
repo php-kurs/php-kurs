@@ -82,3 +82,25 @@ Co zawierają w sobie takie *Magiczne stałe?*
 6. `__TRAIT__`	Nazwa dołączonego do klasy traita włącznie z przestrzenią nazw.
 7. `__METHOD__`	Metoda klasy
 8. `__NAMESPACE__`	Nazwa aktualnej przestrzeni nazw.
+
+# Stałe w klasach
+
+Jest to najczęściej stosowana metoda, ponieważ określa ona zasięg stałych. 
+Obecnie stałe w klasach posiadają widoczność na "public" jednakże może się to niebawem zmienić.
+Poniżej prezentujemy przykład jak zdefiniować taka stałą.
+
+```
+<?php
+namespace Bar;
+
+class Foo
+{
+    const FOO_NAME = "FOO:BAR";
+    const VERSION = "1.3.4";
+}
+
+```
+Tworzymy sobie klasę Foo, która zawiera dwie stałe. `FOO_NAME`  `VERSION` do tych stałych odwołujemy się tak: `\Bar\Foo::FOO_NAME`
+Proste, prawda? Oczywiście `\Bar\` to odwołanie sie do konkretnej przestrzeni nazw!
+
+To już koniec tego rozdziału. **:-)** 

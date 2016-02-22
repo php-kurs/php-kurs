@@ -43,11 +43,11 @@ echo GREETING; // outputs "Hello you."
 echo Greeting; // outputs "Hello you."
 
 // Works as of PHP 7
-define('ANIMALS', array(
+define('ANIMALS',[
     'dog',
     'cat',
     'bird'
-));
+]);
 echo ANIMALS[1]; // outputs "cat"
 
 

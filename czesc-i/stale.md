@@ -3,7 +3,7 @@
 Stałe są to nazwy, które identyfikują jakieś proste wartości. 
 Jak nazwa wskazuje, nie mogą się one zmieniać w trakcie wykonywania skryptu. 
 PHP domyślnie rozróżnia w nazwach stałych wielkość liter.
-Zgodnie z ogólnie przyjętymi zasadami, nazwy stałych piszemy dużymi literami.
+Zgodnie z ogólnie przyjętymi zasadami, nazwy stałych piszemy wielkimi literami.
 
 **Poprawna nazwa stałej zaczyna się od litery lub podkreślenia, po których następuje dowolna ilość liter, cyfr i podkreślników.**
 
@@ -43,11 +43,11 @@ echo GREETING; // outputs "Hello you."
 echo Greeting; // outputs "Hello you."
 
 // Works as of PHP 7
-define('ANIMALS', array(
+define('ANIMALS',[
     'dog',
     'cat',
     'bird'
-));
+]);
 echo ANIMALS[1]; // outputs "cat"
 
 
@@ -103,4 +103,40 @@ class Foo
 Tworzymy sobie klasę Foo, która zawiera dwie stałe. `FOO_NAME`  `VERSION` do tych stałych odwołujemy się tak: `\Bar\Foo::FOO_NAME`
 Proste, prawda? Oczywiście `\Bar\` to odwołanie sie do konkretnej przestrzeni nazw!
 
-To już koniec tego rozdziału. **:-)** 
+# "define()" vs "const"
+Zapewne zastanawiałeś się jaka jest różnica pomiędzy `define()` a `const ` otóż:
+
+* `define()`  umożliwia definiowanie stałych w trakcie wykonywania skryptu, podczas gdy `const` definiuje stałe w czasie kompilacji. 
+To daje `const` nieco większą przewagę w prędkości.
+
+* `define()` "wsadza" wszystkie zdefiniowane stałe do **globalnej przestrzeni** *(global scope)* więc łatwo się domyślić, że nie można go stosować w klasach
+oraz w przestrzeniach nazw. Zobacz ten przykład [https://3v4l.org/DKYAI](https://3v4l.org/DKYAI)
+
+* `define()` może być użyty w bloku `if( ) { } `, a `const` nie.
+
+### Kiedy używać?
+Musisz sam to rozważyć. Obecnie w PHP bardziej idzie się w stronę `const` gdyż jest ono wygodniejsze, szybsze i przede wszystkim **BEZPIECZNIEJSZE**...
+Zobacz poniższy [przykład](https://3v4l.org/qXXj4): 
+```php
+<?php
+
+namespace PHPKurs\Constants\Fruits{
+    const APPLE = "Jabuszko";
+    const BANANA = "Banan";
+}
+namespace PHPKurs\Constants\Animals{
+    const DOG = "pies";
+    const CAT = "kot";
+    const DUCK = "Kaczuszka";
+    const PIG = "Świnka";
+}
+
+namespace {
+    echo \PHPKurs\Constants\Fruits\APPLE;
+    echo " & ";
+    echo \PHPKurs\Constants\Animals\PIG;
+}
+```
+Stałe są w przeznaczonych do tego przestrzeniach nazw i nic nie wypływa do "global scope".
+*Albo robimy pizzę składającą sie z kilku warstw, albo spaghetti! :>*
+Więcej informacji znajdziesz pod tym linkiem: "[Define vs Const stackoverflow](http://stackoverflow.com/questions/2447791/define-vs-const)".

@@ -146,7 +146,7 @@ $longText = <<<'EOF'
 Jakiś długi tekst, który może posiadać nawet
 wiele linijek
 oraz składnię <a href="#">HTML</a>
-EOD;
+EOF;
 ```
 Składnia jest niemalże analogiczna do heredoc. Z tym, że tutaj przy nazwie znacznika końca musimy dopisać apostrofy, które mówią nam o tym, że w środku nie będzie żadnych zmiennych do podmiany.
 

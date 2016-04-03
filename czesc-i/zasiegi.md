@@ -166,9 +166,9 @@ Dziś można powiedzieć, że PHP idzie w kierunku pełnej obiektowości, a narz
 
 Jeśli nie jesteś jeszcze przekonany, zachęcam do przeczytania informacji z tych linków:
 
-http://zapachy-kodu.pl/cleancode/dane-globalne-enkapsulacja-i-czarne-pudelka/2016/01/
-http://stackoverflow.com/questions/5166087/php-global-in-functions?lq=1
-http://c2.com/cgi/wiki?GlobalVariablesAreBad
+* http://zapachy-kodu.pl/cleancode/dane-globalne-enkapsulacja-i-czarne-pudelka/2016/01/
+* http://stackoverflow.com/questions/5166087/php-global-in-functions?lq=1
+* http://c2.com/cgi/wiki?GlobalVariablesAreBad
 
 
 ### Zakres superglobalny

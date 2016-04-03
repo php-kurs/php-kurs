@@ -165,6 +165,7 @@ PHP na początku był językiem skryptowym, który przez wiele lat ewoluował i 
 Dziś można powiedzieć, że PHP idzie w kierunku pełnej obiektowości, a narzędzia skupione w okół obiektów są tak powszechnie obecne w tym języku, że tworzenie profesjonalnych aplikacji w tym języku jest bardzo proste.
 
 Jeśli nie jesteś jeszcze przekonany, zachęcam do przeczytania informacji z tych linków:
+
 http://zapachy-kodu.pl/cleancode/dane-globalne-enkapsulacja-i-czarne-pudelka/2016/01/
 http://stackoverflow.com/questions/5166087/php-global-in-functions?lq=1
 http://c2.com/cgi/wiki?GlobalVariablesAreBad

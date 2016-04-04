@@ -146,7 +146,9 @@ echo "Na zewnątrz funkcji zmienna = {$zmienna}" . PHP_EOL;
 ```
 
 >Wewnątrz funkcji zmienna =
+>
 >Wewnątrz funkcji, zmienna = zawartość druga
+>
 >Na zewnątrz funkcji zmienna = zawartość pierwsza
 
 Jak widzisz, najpierw do zmiennej `$zmienna` o zasięgu globalnym przypisujemy **zawartość pierwsza**. Jest to pierwsze, o czym wspominam, ponieważ funkcja jest wykonywana dopiero w miejscu jej wywołania.

@@ -1,14 +1,14 @@
-# Zakres ważności zmiennych i czas życia obiektu
+# Zasięgi zmiennych i czas życia obiektu
 
-**Zakres** to termin oznaczający ocenę statusu zmiennej jako gwiazdy: jak daleko sięga jej sława? Zakres lub widoczność zmiennej to obszar programu, w którym jest ona znana i może być wykorzystywana w operacjach. Gdy ma ograniczony, niewielki zakres, jest rozpoznawana tylko w nieznacznej części programu — przykładem może być zmienna sterująca jedną małą pętlą. Zmienna o dużym zakresie jest znana w wielu miejscach — jak na przykład używana w całym programie tabela danych pracowników.
+**Zasięg** to termin oznaczający ocenę statusu zmiennej jako gwiazdy: jak daleko sięga jej sława? Zasięg lub widoczność zmiennej to obszar programu, w którym jest ona znana i może być wykorzystywana w operacjach. Gdy ma ograniczony, niewielki zasięg, jest rozpoznawana tylko w nieznacznej części programu — przykładem może być zmienna sterująca jedną małą pętlą. Zmienna o dużym zasięgu jest znana w wielu miejscach — jak na przykład używana w całym programie tabela danych pracowników.
 
-W różnych językach obowiązują odmienne reguły dotyczące zakresu. W niektórych bardzo prostych językach wszystkie zmienne są globalne — nie ma wówczas żadnej kontroli nad zakresem, co może powodować wiele problemów. W języku C++ i podobnych zmienna może być widoczna w bloku (części kodu wydzielonej nawiasami klamrowymi), procedurze, klasie (i ewentualnie klasach pochodnych) lub całym programie. W PHP a także w Javie i C# może być także widoczna w obrębie pakietu lub przestrzeni nazw (zbiorze klas).
+W różnych językach obowiązują odmienne reguły dotyczące zasięgu. W niektórych bardzo prostych językach wszystkie zmienne są globalne — nie ma wówczas żadnej kontroli nad zasięgiem, co może powodować wiele problemów. W języku C++ i podobnych zmienna może być widoczna w bloku (części kodu wydzielonej nawiasami klamrowymi), procedurze, klasie (i ewentualnie klasach pochodnych) lub całym programie. W PHP, a także w Javie i C# może być także widoczna w obrębie pakietu lub przestrzeni nazw (zbiorze klas).
 
 W PHP (jak i innych językach programowania) mamy do czynienia z następującymi pojęciami: 
 
  * *rozpiętością*, 
  * *czasem aktywności obiektu*
- * *zakresem ważności nazwy zmiennej*.
+ * *zakresem ważności nazwy zmiennej* zwanym też zasięgiem zmiennej.
 
 ## Rozpiętość kodu
 Spójrz na ten kod:
@@ -34,16 +34,16 @@ Gdy odwołania do zmiennych znajdują się blisko siebie, osoba czytająca kod m
 
 Pojęciem pokrewnym do rozpiętości jest "czas aktywności" *(ang. live time)*, czyli całkowita liczba instrukcji w części kodu, w której zmienna jest wykorzystywana. Okres aktywności zmiennej rozpoczyna pierwsza, a kończy ostatnia z zawierających ja instrukcji.
 
-W przypadku czasu aktywności nie jest ważne *ile razy zmienna została użyta* pomiędzy pierwszym a ostatnim wierszem, w którym występuje. 
+W przypadku czasu aktywności nie jest ważne, ile razy zmienna została użyta pomiędzy pierwszym a ostatnim wierszem, w którym występuje. 
 
-Przykładowo jeżeli miejscem jej pierwszego użycia jest wiersz, a miejscem ostatniego wystąpienia wiersz 25., czas aktywności to 25 wierszy. Jeżeli są to jedyne wiersze, w których zmienna się pojawia, średnia rozpiętość  wynosi 23. 
+Przykładowo, jeżeli miejscem jej pierwszego użycia jest wiersz, a miejscem ostatniego wystąpienia wiersz 25., czas aktywności to 25 wierszy. Jeżeli są to jedyne wiersze, w których zmienna się pojawia, średnia rozpiętość  wynosi 23. 
 W przypadku gdy zmienna jest wykorzystywana we wszystkich 25 wierszach, średnia rozpiętość jest równa 0. Czas aktywności, wynoszący 25 wierszy pozostaje niezmieniony.
 
 >Długi czas aktywności oznacza, że zmienna pozostaje aktywna na przestrzeni wielu wierszy, natomiast krótki - że jest ona aktywna tylko przez kilka instrukcji. Rozpiętość to miara odległości między poszczególnymi miejscami użycia zmiennej.
 
 Podobnie jak w przypadku rozpiętości, celem projektanta i programisty jest dążenie do utrzymania na niskim poziomie czasu aktywności. Analogicznie, podstawową zaletą krótkiego czasu aktywności jest zmniejszenie obszaru potencjalnie niebezpiecznego — redukuje to prawdopodobieństwo omyłkowej zmiany wartości zmiennej między miejscami w których jest we właściwy sposób wykorzystywana.
 
-Drugą zaletą krótkiego czasu aktywności jest to, że zapewnia on przejrzystość kodu. Jeżeli przypisanie wartości zmiennej następuje w wierszu 10, po czym zostaje ona użyta w wierszu 45., już sama odległość między tymi wierszami sugeruje, że w kodzie, który obejmują, wartość zmiennej ma pewne znaczenie. Jeżeli przypisanie nastęuje w wierszu 44, a użycie w 45., podobna sugestia nie występuje i programista może skoncentrować się na mniejszej części programu.
+Drugą zaletą krótkiego czasu aktywności jest to, że zapewnia on przejrzystość kodu. Jeżeli przypisanie wartości zmiennej następuje w wierszu 10, po czym zostaje ona użyta w wierszu 45., już sama odległość między tymi wierszami sugeruje, że w kodzie, który obejmują, wartość zmiennej ma pewne znaczenie. Jeżeli przypisanie następuje w wierszu 44, a użycie w 45., podobna sugestia nie występuje i programista może skoncentrować się na mniejszej części programu.
 
 Krótki czas aktywności zmniejsza także prawdopodobieństwo wystąpienia błędów związanych z inicjalizacją. W trakcie modyfikowania programu prosty, liniowy kod jest często przekształcany w różnego rodzaju pętle. Wówczas łatwo zapomnieć o inicjalizacjach, które nastąpiły w zupełnie innym, duże wcześniejszym miejscu. Jeżeli kod inicjalizacji i kod pętli znajdują się obok siebie, ryzyko, że zmiany doprowadzą do błędów inicjalizacji, maleje.
 
@@ -61,14 +61,14 @@ To ta część programu, w której nazwa obiektu jest znana, czyli obiekt jest d
 
 Jaka jest różnica pomiędzy tymi pojęciami?
 
-Taka, ze w jakimś momencie obiekt może istnieć, ale nie być dostępny. To dlatego, że np. znajdujemy się chwilowo poza zakresem ważności jego nazwy.
+Taka, ze w jakimś momencie obiekt może istnieć, ale nie być dostępny. To dlatego, że np. znajdujemy się chwilowo poza zasięgiem ważności jego nazwy.
 
-Zależnie od tego, jak zdefiniujemy lub zdeklarujemy nazwę, zakres jej ważności może być różnego rodzaju.
+Zależnie od tego, jak zdefiniujemy lub zadeklarujemy nazwę, zasięg jej ważności może być różnego rodzaju.
 
 
-### Zakres lokalny
+### Zasięg lokalny
 
-Zakres ważności jest lokalny, gdy świadomie ograniczamy go do kilku linijek programu. Pisząc program możemy w dowolnym momencie za pomocą dwóch klamer `{` i `}` utworzyć tak zwany blok (po klamrze kończącej blok nie trzeba stawiać średnika).
+Zakres ważności (zasięg zmiennej) jest lokalny, gdy świadomie ograniczamy go do kilku linijek programu. Pisząc program możemy w dowolnym momencie za pomocą dwóch klamer `{` i `}` utworzyć tak zwany blok (po klamrze kończącej blok nie trzeba stawiać średnika).
 Zdefiniowane w takim bloku nazwy mają zakres ważności ograniczony tylko do tego bloku. Po prostu poza tym blokiem nazwy te nie są znane.
 
 ```php
@@ -81,9 +81,9 @@ Zdefiniowane w takim bloku nazwy mają zakres ważności ograniczony tylko do te
 ```
 Nazwa zmiennej `$x` jest znana od momentu, gdy ją zdefiniowaliśmy - do linijki, gdzie jest klamra kończąca jej lokalny blok.
 
-### Zakres funkcji
+### Zasięg funkcji
 
-Wiemy już, że funkcję otwiera nawias klamrowy `{` a kończy nawias klamrowy `}`. Te dwa nawiasy wyznaczają blok funkcji - między nimi są instrukcje składające się na tę funkcję.
+Wiemy już, że funkcję otwiera nawias klamrowy `{` a kończy nawias klamrowy `}`. Te dwa nawiasy wyznaczają blok funkcji - między nimi są instrukcje składające się na tę funkcję. Zasięg funkcji i zasięg lokalny są praktycznie identyczne. Wyżej omówiony zasięg, posiadający wyłącznie klamry, czasem nazywa się funkcjami `inline`. Rozdzieliłem je specjalnie ponieważ różni je jedynie forma zapisu. Funkcja poziada instrukcję `function` oraz nazwę metody i blok otoczony klamrami. Funkcja typu inline jest jedynie blokiem złożonym z klamr i ciała. 
 
 Zmienne zadeklarowane wewnątrz funkcji posiadają zasięg od miejsca, w którym zastały zadeklarowane, do końca funkcji. Nazywa się to *zasięgiem funkcji*, a zmienne nazywane są *zmiennymi lokalnymi*.
 
@@ -99,34 +99,34 @@ printContent();
 echo $content;
 ```
 
-Posiadamy funkcję `printContent()` wewnątrz której zadeklarowaliśmy zmienną `$content`. Wynikiem działania tego programu będzie:
+Posiadamy funkcję `printContent()`, wewnątrz której zadeklarowaliśmy zmienną `$content`. Wynikiem działania tego programu będzie:
 ```
 Notice: Undefined variable: content in index.php on line 8
 ```
 
-Dzieje się tak z tego powodu, że zmienna `$content` posiada zakres lokalny funkcji `printContent()`. Jest ona widoczna jedynie w bloku tej funkcji.
-Gdy próbujemy wyświetlić ją na ekranie za pomocą `echo` - interpreter nie rozpoznaje tej nazwy. Dzieje się tak dlatego, że interpreter twoży nową zmienną `$content`, **ale o zakresie globalnym**. Jeśli w tym samym czasie zastosujemy do tej zmiennej `echo` nigdy nie będzie posiadać wartości.
+Dzieje się tak z tego powodu, że zmienna `$content` posiada zasięg lokalny funkcji `printContent()`. Jest ona widoczna jedynie w bloku tej funkcji.
+Gdy próbujemy wyświetlić ją na ekranie za pomocą `echo` - interpreter nie rozpoznaje tej nazwy. Dzieje się tak dlatego, że interpreter tworzy nową zmienną `$content`, **ale o zasięgu globalnym**. Jeśli w tym samym czasie zastosujemy do tej zmiennej `echo` nigdy nie będzie mieć wartości.
 
-Mamy tutaj również do czynienia z innym elementem, który znacząco wpływa na czytelność kodu. Jak widzisz, interpreter pozwala mieć takie same nazwy zmiennych w różnych zakresach.
-W naszym przypadku posiadamy zmienną `$content` w zakresie bloku funkcji, oraz zmienną `$content` o zakresie globalnym dla pliku. Są to dwie różne od siebie zmienne - niezależne.
+Mamy tutaj również do czynienia z innym elementem, który znacząco wpływa na czytelność kodu. Jak widzisz, interpreter pozwala mieć takie same nazwy zmiennych w różnych zasięgach.
+W naszym przypadku posiadamy zmienną `$content` w zasięgach bloku funkcji oraz zmienną `$content` o zasięgu globalnym dla pliku. Są to dwie różne od siebie zmienne - niezależne.
 
-> Aby zachować czytelność kodu należy się starać nazywać w różny sposób zmienne w różnych zakresach. Dzięki temu szybciej odnajdziemy problematyczny dla nas kawałek kodu.
+> Aby zachować czytelność kodu, należy się starać nazywać w różny sposób zmienne w różnych zasięgach. Dzięki temu szybciej odnajdziemy problematyczny dla nas kawałek kodu.
 
-### Zakres klasy
+### Zasięg klasy
 
-W przypadku tego zakresu mamy do czynienia z pojęciem eknapsulacji danych. Jednakże temu zagadnieniu się przyjrzymy nieco później - w trakcie omawiania obiektowych podstaw PHP.
-W skrócie mogę napisać, że zmienne w zakresie klasy do pewnego stopnia przypominają zachowanie zmiennych w zakresie bloku funkcji. Jednak istnieją przypadki, że jedna zmienna może być widoczna w dwóch lub większej ilości klas.
+W przypadku tego zasięgu mamy do czynienia z pojęciem eknapsulacji danych. Jednakże temu zagadnieniu się przyjrzymy nieco później - w trakcie omawiania obiektowych podstaw PHP.
+W skrócie mogę napisać, że zmienne w zasięgu klasy do pewnego stopnia przypominają zachowanie zmiennych w zasięgu bloku funkcji. Jednak istnieją przypadki, że jedna zmienna może być widoczna w dwóch lub większej ilości klas.
 
-### Zakres określony przez przestrzeń nazw
+### Zasięg określony przez przestrzeń nazw
 
 To zagadnienie również zostanie szerzej omówione w trakcie omawiania obiektowych podstaw PHP. Przestrzeń nazw *(ang. namespace)* jest to taki element kodu, który definiuje zasięg ważności wszystkich użytych nazw w danej części programu. Mogą to być nazwy klas, nazwy metod czy nazwy zmiennych i stałych.
-Powstanie takiej konstrukcji ma bardzo duże znaczenie - dzięki temu nasze programy stały się bardziej niezależne. Warto też wspomnieć, że zakres określony przez przestrzeń nazw może posiadać wiele klas.
+Powstanie takiej konstrukcji ma bardzo duże znaczenie - dzięki temu nasze programy stały się bardziej niezależne. Warto też wspomnieć, że zasięg określony przez przestrzeń nazw może posiadać wiele klas.
 
 Wszystko wyjaśni się nieco później - na chwilę obecną wybacz mi enigmatyczność.
 
-### Zakres globalny
+### Zasięg globalny
 
-Gdy mówimy o zakresie globalnym mamy na myśli zmienne zadeklarowane na zewnątrz funkcji mają zasięg od miejsca, w którym zostały wywołane, do końca pliku, ale nie **wewnątrz funkcji**.
+Gdy mówimy o zasięgu globalnym, mamy na myśli zmienne zadeklarowane na zewnątrz funkcji mają zasięg od miejsca, w którym zostały wywołane, do końca pliku, ale nie **wewnątrz funkcji**.
 Nazywa się to *zasięgiem globalnym*, a zmienne noszą nazwę *zmiennych globalnych*.
 
 W poniższym przykładzie została przedstawiona sytuacja odwrotna. Zmienna jest zadeklarowana na zewnątrz funkcji, po czym następuje próba zastosowania jej wewnątrz niej.
@@ -146,23 +146,24 @@ echo "Na zewnątrz funkcji zmienna = {$zmienna}" . PHP_EOL;
 ```
 
 >Wewnątrz funkcji zmienna =
-Wewnątrz funkcji, zmienna = zawartość druga
-Na zewnątrz funkcji zmienna = zawartość pierwsza
+>Wewnątrz funkcji, zmienna = zawartość druga
+>Na zewnątrz funkcji zmienna = zawartość pierwsza
 
-Jak widzisz, najpierw do zmiennej `$zmienna` o zakresie globalnym przypisujemy **zawartość pierwsza**. Jest to pierwsze o czym wspominam, ponieważ funkcja jest wykonywana dopiero w miejscu jej wywołania.
+Jak widzisz, najpierw do zmiennej `$zmienna` o zasięgu globalnym przypisujemy **zawartość pierwsza**. Jest to pierwsze, o czym wspominam, ponieważ funkcja jest wykonywana dopiero w miejscu jej wywołania.
 Wykonujemy metodę `jola()`.
-Wewnątrz metody staramy się odwołać do zmiennej `$zmienna` - ale w tej chwili jesteśmy w zakresie lokalnym - bloku funkcji. Nie mamy dostępu do wcześniej zadeklarowanej zmiennej. Stąd brak wyniku przy wykonaniu `echo` w tej linii.
+Wewnątrz metody staramy się odwołać do zmiennej `$zmienna` - ale w tej chwili jesteśmy w zasięgu lokalnym - bloku funkcji. Nie mamy dostępu do wcześniej zadeklarowanej zmiennej. Stąd brak wyniku przy wykonaniu `echo` w tej linii.
 Kolejnym krokiem jest *zadeklarowanie* zmiennej `$zmienna` nadając jej wartość **zawartość druga**.
 Na koniec tej metody, wyświetlamy zawartość utworzonej zmiennej i na ekranie pojawia nam się napis **zawartość druga**.
 
-Po wykonaniu metody, wyświetlamy na ekranie zawartość zmiennej `$zmienna`. O dziwo dostajemy wynik **zawartość pierwsza**.
-Dzieje się tak dlatego, że wyświetlamy zawartość zmiennej o zakresie globalnym. Taka zmienna jest widoczna w całym pliku od momentu jej zadeklarowania do końca życia obiektu. Nie jest jedynie widoczna w zakresie bloku funkcji.
+Po wykonaniu metody wyświetlamy na ekranie zawartość zmiennej `$zmienna`. O dziwo dostajemy wynik **zawartość pierwsza**.
+Dzieje się tak dlatego, że wyświetlamy zawartość zmiennej o zasięgu globalnym. Taka zmienna jest widoczna w całym pliku od momentu jej zadeklarowania do końca życia obiektu. Nie jest jedynie widoczna w zasięgu bloku funkcji.
 
 **UWAGA**
-Stosowanie zmiennych globalnych niemalże we wszystkich językach i przypadkach jest bardzo złą praktyką. Jeśli piszemy kod proceduralny, nie jest to tak naganne, jednakże parafrazując chociażby Bertranda Meyera (jednego z ojców dzisiejszych standardów programowania obiektowego): "Dobry obiektowy język programowania nie powinien nawet udostępniać możliwości tworzenia zmiennych globalnych".
 
-PHP na początku był językiem skryptowym, który przez wiele lat ewoluował i dopiero od końcówek wersji czwartej zaczęły pojawiać się w nim elementy obiektowości. Dzięki takiemu uporowi autora, do języka została przylepiona niesławna etykieta niezgodnnego ze standardami programowania, czy języka nie nadającego się do tworzenia ogromnych komercyjnych aplikacji.
-Dziś można powiedzieć, że PHP idzie w kierunku pełnej obiektowości, a narzędzia skupione w okół obiektów są tak powszechnie obecne w tym języku, że tworzenie profesjonalnych aplikacji w tym języku jest bardzo proste.
+Stosowanie zmiennych globalnych niemalże we wszystkich językach i przypadkach jest bardzo złą praktyką. Jeśli piszemy kod proceduralny, nie jest to tak naganne, jednakże parafrazując, chociażby Bertranda Meyera (jednego z ojców dzisiejszych standardów programowania obiektowego): "Dobry obiektowy język programowania nie powinien nawet udostępniać możliwości tworzenia zmiennych globalnych".
+
+PHP na początku był językiem skryptowym, który przez wiele lat ewoluował i dopiero od końcówek wersji czwartej zaczęły pojawiać się w nim elementy obiektowości. Dzięki takiemu uporowi autora, do języka została przylepiona niesławna etykieta niezgodnego ze standardami programowania, czy języka nienadającego się do tworzenia ogromnych komercyjnych aplikacji.
+Dziś można powiedzieć, że PHP idzie w kierunku pełnej obiektowości, a narzędzia skupione wokół obiektów są tak powszechnie obecne w tym języku, że tworzenie profesjonalnych aplikacji w tym języku jest bardzo proste.
 
 Jeśli nie jesteś jeszcze przekonany, zachęcam do przeczytania informacji z tych linków:
 
@@ -171,12 +172,12 @@ Jeśli nie jesteś jeszcze przekonany, zachęcam do przeczytania informacji z ty
 * http://c2.com/cgi/wiki?GlobalVariablesAreBad
 
 
-### Zakres superglobalny
+### Zasięg superglobalny
 
 Język PHP różni się od innych również tym, że posiada zmienne **superglobalne**. Czasem nazywa się je ponadglobalnymi (chociaż uważam to za koślawe i dość komiczne tłumaczenie).
 
-Wykorzystujemy tutaj fakt, że specjalna tablica PHP `$GLOBALS` jest dostępna we wszystkich zakresach.
-Tablica ta zawiera elementy odpowiadające wszystkim zmiennym w zakresie globalnym.
+Wykorzystujemy tutaj fakt, że specjalna tablica PHP `$GLOBALS` jest dostępna we wszystkich zasięgach.
+Tablica ta zawiera elementy odpowiadające wszystkim zmiennym w zasięgu globalnym.
 Oznacza to, że w dowolnej funkcji można skorzystać z odwołania `$GLOBALS['nazwa']`, aby uzyskać dostęp do zmiennej globalnej `$nazwa`.
 
 Oto przykłady zmiennych superglobalnych:
@@ -217,7 +218,7 @@ Robimy to za pomocą ekwiwalentów powyższych metod z dopiskiem `once`.
 
 >Warto też zaznaczyć, że stosowanie wyrażeń `require()` i `include()` nie zmienia zasięgu. Jeżeli wyrażenie to zostało wywołane wewnątrz funkcji, odnosi się do niego zasięg lokalny, jeśli na zewnątrz funkcji - zasięg globalny.
 
-## Minimalizowanie zakresu - uwagi końcowe
+## Minimalizowanie zakresu (zasięgu) - uwagi końcowe
 
 Podejście programistów do problemu minimalizowania zakresu zmiennych zależy w dużej mierze od tego, jak rozumieją oni pojęcia "wygoda" i "opanowanie zależności". Niektórzy programiści stosują wiele zmiennych globalnych, ponieważ zapewnia to łatwy dostęp do ich wartości i pozwala uniknąć zabawy z listami parametrów i regułami dotyczącymi zakresu w klasach. Uważają oni, że wygoda dostępu do zmiennej w dowolnym momencie jest cenniejsza niż związane z tym ryzyko.
 

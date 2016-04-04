@@ -1,4 +1,4 @@
- ![PHP Kurs](http://i.imgur.com/O7IGsX1.png)
+![PHP Kurs](http://i.imgur.com/O7IGsX1.png)
 
 # Cześć!
 

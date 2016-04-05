@@ -1,11 +1,6 @@
 {
     "plugins": [
-        "github",
-        "github-buttons",
+        "github"
     ],
-    "pluginsConfig": {
-        "github": {
-            "url": "https://github.com/php-kurs/php-kurs"
-        }
-    }
+    "pluginsConfig": {}
 }

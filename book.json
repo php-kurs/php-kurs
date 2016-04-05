@@ -2,5 +2,9 @@
     "plugins": [
         "github"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/php-kurs/php-kurs"
+        }
+    }
 }

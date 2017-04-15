@@ -51,7 +51,7 @@ while($i <= 10) {
     echo $i;
 }
 ```
-O ile pętla `for` się wykona bezbłędnie, o tyle pętla `while` nigdy. To dlatego, że zmienna `$i` istnieje dalej w programie i posiada wartość `10`.
+O ile pętla `for` się wykona bezbłędnie, o tyle pętla `while` nigdy. To dlatego, że zmienna `$i` istnieje dalej w programie i posiada wartość `11`.
 ## Korzystaj z dobrych ostrzeżeń IDE 
 PHPStorm wykrywa za Ciebie, czy dana zmienna jest gdziekolwiek w kodzie wykorzystywana. Jeżeli znajdzie taką, która istnieje, a jest nieużywana powiadomi Ciebie o tym. Dzięki temu będziesz mógł spokojnie ją usunąć lub wykorzystać. 
 ## Zasada Pojedynczej odpowiedzialności - jeden cel dla jednej zmiennej

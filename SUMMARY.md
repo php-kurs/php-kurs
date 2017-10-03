@@ -22,6 +22,7 @@
   * [Ponowne wykorzystanie kodu](czesc-i/ponowne-wykorzystanie-kodu.md)
 * [Część II](czesc-ii.md)
 * [Część III](czesc-iii.md)
+* [Część IV](czesc-iv.md)
 * [Część V](czesc-v/README.md)
   * [Pisanie stron obiektowo](czesc-v/pisanie-stron-obiektowo.md)
   * [Czas życia skryptu](czesc-v/lifetimePHP.md)

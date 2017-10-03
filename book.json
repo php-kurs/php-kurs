@@ -1,11 +1,15 @@
 {
     "plugins": [
         "github",
-        "github-buttons"
+        "github-buttons",
+        "ga"
     ],
     "pluginsConfig": {
         "github": {
             "url": "https://github.com/php-kurs/php-kurs"
+        },
+        "ga": {
+            "token": "UA-68861340-1"
         }
     }
 }

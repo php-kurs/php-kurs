@@ -16,7 +16,7 @@ Najważniejsze zasady nazewnictwa zmiennych to:
  - poświęć chwilkę, aby dobrać odpowiednią nazwę tej zmiennej oraz zastanów się, czy rzeczywiście jest ona potrzebna (może gdzieś w kodzie masz już taką i teraz niepotrzebnie ją zduplikujesz)
 
 **Czemu takie zasady, a nie inne?**
-Wyobraź sobie kod, w którym nazwy zmiennych raz są po Polsku, raz po Angielsku, a jeszcze gdzie indziej po Węgiersku.
+Wyobraź sobie kod, w którym nazwy zmiennych raz są po polsku, raz po angielsku, a jeszcze gdzie indziej po węgiersku.
 
 Składnia camelCase (jednen z heheszkowych tłumaczy helionu przetłumaczył ten zwrot na *wielbłądzia składnia*) ujednolica zapis zmiennych i oddziela je od STAŁYCH, które są wyłącznie wielkimi literami.
 Poza tym ze względu na to, iż PHP potrzebuje `$` przed nazwą zmiennej, dużo czytelniejsze jest zapisać jej nazwę zaczynając małą literą. 

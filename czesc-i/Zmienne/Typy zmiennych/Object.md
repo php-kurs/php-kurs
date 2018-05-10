@@ -5,7 +5,7 @@ Jako, iż PHP jest jezykiem obiektowym posiada wbudowany typ obiektowy `Object	`
 
 class Person
 {
-	private $age = 18;
+    private $age = 18;
 
     public function showAge()
     {
